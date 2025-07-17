@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaris AI Studio - AI Solutions for Business & Families</title>
+    <meta name="description" content="Polaris AI Studio creates intelligent solutions for businesses and families. From automated software engineering to child education AI - we make life smarter.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .star-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-gradient">⭐ Polaris AI Studio</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Services</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Portfolio</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <a href="#home" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Home</a>
+            <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+            <a href="#services" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Services</a>
+            <a href="#portfolio" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Portfolio</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 min-h-screen flex items-center bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="text-6xl">⭐</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Smart AI Solutions for
+                        <span class="text-gradient">Business & Family Life</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        From automating software development to creating educational AI for children, we build intelligent systems that make work easier and family life smarter.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#services" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 text-center">
+                            Explore Solutions
+                        </a>
+                        <a href="#portfolio" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300 text-center">
+                            View Our Work
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="gradient-bg star-pattern rounded-3xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">🚀 What We Do</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-lg">💼</span>
+                                </div>
+                                <span class="text-lg">Business Automation & AI Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-lg">👨‍👩‍👧‍👦</span>
+                                </div>
+                                <span class="text-lg">Family AI Solutions & Child Education</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-lg">🧠</span>
+                                </div>
+                                <span class="text-lg">Machine Learning & Behavioral AI</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-lg">🏆</span>
+                                </div>
+                                <span class="text-lg">Competitive AI Research & Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Polaris AI Studio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're passionate about creating AI that serves everyone - from Fortune 500 companies to families with young children.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl card-hover text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">🎯</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Innovation Focus</h3>
+                    <p class="text-gray-600">
+                        Cutting-edge AI research meets practical solutions. We compete in global challenges while building real-world applications.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl card-hover text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👥</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Family-Centered</h3>
+                    <p class="text-gray-600">
+                        We believe AI should enhance family life, supporting parents and providing engaging educational experiences for children.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl card-hover text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">🚀</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Proven Results</h3>
+                    <p class="text-gray-600">
+                        Top rankings in Kaggle competitions and participation in million-dollar AI challenges prove our technical excellence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
+                        <p class="text-gray-600 mb-4">
+                            Polaris AI Studio was founded on the belief that artificial intelligence should be a guiding star for progress in both business and personal life. We combine cutting-edge research with practical applications that make a real difference.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            From competing in the $1M Konwinski Prize to developing AI tutors for children, we're building the future of intelligent assistance across all areas of life.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600">$1M+</div>
+                                <div class="text-sm text-gray-600">Competition Prize Pools</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600">Top 15%</div>
+                                <div class="text-sm text-gray-600">Kaggle Rankings</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-2xl">
+                        <h4 class="text-lg font-bold text-gray-900 mb-4">🌟 Our Values</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Innovation with purpose</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Family-friendly technology</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Ethical AI development</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-300 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Continuous learning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We create intelligent systems for both professional and personal life - from enterprise automation to family assistance.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1: Business AI -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl">💼</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Business Automation</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Automated software engineering, GitHub issue resolution, and intelligent code generation systems.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li>• Automated bug fixing</li>
+                        <li>• Code generation</li>
+                        <li>• Development workflows</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Family AI -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl">👨‍👩‍👧‍👦</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Family AI Solutions</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        AI-powered tools for parents' convenience, child education, and family development support.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li>• Smart parenting assistants</li>
+                        <li>• Educational AI tutors</li>
+                        <li>• Child development tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Education AI -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl">🎓</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Child Education AI</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Personalized learning systems, interactive AI tutors, and educational games for children's development.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li>• Personalized learning paths</li>
+                        <li>• Interactive AI tutors</li>
+                        <li>• Educational games</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Behavioral AI -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-blue-800 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Behavioral AI</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Advanced machine learning for personality prediction, behavioral analysis, and pattern recognition.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li>• Personality classification</li>
+                        <li>• Behavioral patterns</li>
+                        <li>• Predictive analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Detailed Services -->
+            <div class="mt-16 grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-600 p-8 rounded-2xl text-white">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-2xl">🏢</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">For Businesses</h3>
+                    </div>
+                    <p class="mb-6 opacity-90">
+                        Transform your operations with cutting-edge AI automation, intelligent software engineering, and data-driven insights.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                            <span>Automated GitHub issue resolution</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                            <span>Custom ML pipeline development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                            <span>Behavioral analytics platforms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-500 p-8 rounded-2xl text-white">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-2xl">👨‍👩‍👧‍👦</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">For Families</h3>
+                    </div>
+                    <p class="mb-6 opacity-90">
+                        Smart AI solutions that make parenting easier and help children learn, grow, and develop their full potential.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                            <span>AI-powered educational games</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                            <span>Smart parenting assistants</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                            <span>Child development tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Work & Achievements</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From global AI competitions to real-world applications, here's what we've been building.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1: Konwinski Prize -->
+                <div class="bg-white p-6 rounded-2xl card-hover">
+                    <div class="w-full h-40 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-5xl">🏆</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Konwinski Prize Challenge</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Competing in the $1M challenge to build AI that resolves 90% of GitHub issues automatically.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">AI Agents</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Code Gen</span>
+                    </div>
+                    <a href="https://github.com/polarisaistudio" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Project →</a>
+                </div>
+
+                <!-- Project 2: Personality AI -->
+                <div class="bg-white p-6 rounded-2xl card-hover">
+                    <div class="w-full h-40 bg-gradient-to-r from-blue-400 to-blue-500 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-5xl">🧠</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Personality Prediction AI</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Top-ranking Kaggle competition entry for behavioral AI and personality classification.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">ML</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Psychology</span>
+                    </div>
+                    <a href="https://kaggle.com/competitions/playground-series-s5e7" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Competition →</a>
+                </div>
+
+                <!-- Project 3: Family AI -->
+                <div class="bg-white p-6 rounded-2xl card-hover">
+                    <div class="w-full h-40 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-5xl">👨‍👩‍👧‍👦</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Smart Family Assistant</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        AI-powered platform helping parents with daily tasks and child development tracking.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Family AI</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Parenting</span>
+                    </div>
+                    <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</a>
+                </div>
+
+                <!-- Project 4: Education AI -->
+                <div class="bg-white p-6 rounded-2xl card-hover">
+                    <div class="w-full h-40 bg-gradient-to-r from-blue-300 to-blue-400 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-5xl">🎓</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">AI Learning Companion</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Personalized AI tutor that adapts to each child's learning style and developmental needs.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Education</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Child Dev</span>
+                    </div>
+                    <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Coming Soon →</a>
+                </div>
+
+                <!-- Project 5: Business Analytics -->
+                <div class="bg-white p-6 rounded-2xl card-hover">
+                    <div class="w-full h-40 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-5xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Automated Analytics Platform</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        End-to-end machine learning platform for business intelligence and predictive analytics.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Analytics</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Business</span>
+                    </div>
+                    <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Request Demo →</a>
+                </div>
+
+                <!-- Project 6: Open Source -->
+                <div class="bg-white p-6 rounded-2xl card-hover">
+                    <div class="w-full h-40 bg-gradient-to-r from-blue-200 to-blue-300 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-5xl">🔓</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Open Source Tools</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Contributing to the AI community with open-source tools, libraries, and educational resources.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Open Source</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Community</span>
+                    </div>
+                    <a href="https://github.com/polarisaistudio" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg star-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's Build Something Amazing Together</h2>
+                <p class="text-xl text-white opacity-90 max-w-3xl mx-auto">
+                    Whether you need business automation or family AI solutions, we're here to help you navigate the future with intelligent technology.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">📧</span>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">Email</p>
+                                <p class="text-white opacity-80">hello@polarisaistudio.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🌍</span>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">Location</p>
+                                <p class="text-white opacity-80">Remote • Serving Globally</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">💻</span>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">GitHub</p>
+                                <p class="text-white opacity-80">github.com/polarisaistudio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">I'm interested in</label>
+                            <select class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                                <option value="" disabled selected>Choose a solution</option>
+                                <option value="business">Business Automation & AI</option>
+                                <option value="family">Family AI Solutions</option>
+                                <option value="education">Child Education AI</option>
+                                <option value="consulting">AI Consulting</option>
+                                <option value="custom">Custom Development</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Tell us about your project or needs..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <h3 class="text-2xl font-bold text-gradient mb-4">⭐ Polaris AI Studio</h3>
+                    <p class="text-gray-300 mb-6">
+                        Creating intelligent solutions for businesses and families. From automated software engineering to child education AI - we make life smarter and more convenient.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/polarisaistudio" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <span class="text-sm">💻</span>
+                        </a>
+                        <a href="https://linkedin.com/company/polarisaistudio" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <span class="text-sm">💼</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#services" class="hover:text-white transition duration-300">Business Automation</a></li>
+                        <li><a href="#services" class="hover:text-white transition duration-300">Family AI Solutions</a></li>
+                        <li><a href="#services" class="hover:text-white transition duration-300">Child Education AI</a></li>
+                        <li><a href="#services" class="hover:text-white transition duration-300">Behavioral Analytics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#about" class="hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition duration-300">Our Work</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="https://github.com/polarisaistudio" class="hover:text-white transition duration-300">Open Source</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Polaris AI Studio. All rights reserved. Navigate the future with intelligent AI solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon.');
+        });
+    </script>
+</body>
+</html>
