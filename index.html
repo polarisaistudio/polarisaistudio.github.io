@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polaris AI Studio - Empowering Families Through AI</title>
-    <meta name="description" content="Innovative AI systems for family needs and children's development & education. Nurturing growth through intelligent technology.">
+    <title>Polaris AI Studio - Guided by Intelligence. Powered by Heart.</title>
+    <meta name="description" content="Creative technology company blending AI with human purpose. Building AI tools, publishing children's books, cybersecurity consulting, and health insurance services.">
     
     <style>
         * {
@@ -50,10 +50,12 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            display: flex;
+            align-items: center;
         }
 
         .nav-links {
@@ -71,7 +73,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #06b6d4;
         }
 
         .nav-links a::after {
@@ -81,7 +83,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
             transition: width 0.3s ease;
         }
 
@@ -92,7 +94,7 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #2563eb 50%, #1e40af 100%);
             display: flex;
             align-items: center;
             position: relative;
@@ -146,14 +148,14 @@
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
+            background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
+            color: white;
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
             animation: slideInLeft 1s ease-out 0.4s both;
         }
 
@@ -229,7 +231,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -268,14 +270,14 @@
         .mission-icon {
             width: 250px;
             height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
             border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 4rem;
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
             transition: transform 0.3s ease;
         }
 
@@ -307,7 +309,7 @@
         .product-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -331,7 +333,7 @@
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #2563eb 50%, #1e40af 100%);
             color: white;
             text-align: center;
         }
@@ -349,14 +351,14 @@
 
         .contact-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
+            background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
+            color: white;
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
         }
 
         .contact-button:hover {
@@ -418,11 +420,14 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Polaris AI Studio</div>
+            <div class="logo">
+                <img src="logo.png" alt="Polaris AI Studio" style="height: 40px; width: auto; margin-right: 10px; vertical-align: middle;">
+                Polaris AI Studio
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -432,91 +437,74 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Empowering Families Through AI</h1>
-                <p>Innovative AI systems designed specifically for family needs and children's development. We create intelligent solutions that nurture growth, enhance learning, and strengthen family bonds.</p>
-                <a href="#products" class="cta-button">Explore Our Solutions</a>
+                <h1>Guided by Intelligence. Powered by Heart.</h1>
+                <p>Polaris AI Studio blends artificial intelligence with human warmth to create tools, stories, and solutions that illuminate life's journey. Like the North Star, we guide families, creators, and businesses toward meaningful growth through smart technology and heartfelt purpose.</p>
+                <a href="#services" class="cta-button">Explore Our Services</a>
             </div>
             <div class="hero-visual">
-                <div class="hero-icon">
-                    <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="75" cy="45" r="15" fill="white" opacity="0.8"/>
-                        <circle cx="50" cy="75" r="12" fill="white" opacity="0.6"/>
-                        <circle cx="100" cy="75" r="12" fill="white" opacity="0.6"/>
-                        <circle cx="75" cy="105" r="10" fill="white" opacity="0.4"/>
-                        <path d="M75 45 L50 75 L75 105 L100 75 Z" stroke="white" stroke-width="2" fill="none" opacity="0.7"/>
-                        <circle cx="75" cy="75" r="25" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
-                    </svg>
+                <div class="hero-logo">
+                    <img src="logo.png" alt="Polaris AI Studio" style="width: 300px; height: 300px; object-fit: contain;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="section mission">
+    <!-- About Section -->
+    <section id="about" class="section mission">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Our Mission</h2>
-                <p>Bridging technology and family life to create meaningful connections and educational experiences</p>
+                <h2>About Polaris AI Studio</h2>
+                <p>A creative technology company where artificial intelligence meets human purpose</p>
             </div>
             <div class="mission-content">
                 <div class="mission-text fade-in">
-                    <p>At Polaris AI Studio, we believe that artificial intelligence should serve humanity's most fundamental unit: the family. Our mission is to develop AI systems that understand the unique dynamics of family life and support children's natural curiosity and development.</p>
+                    <p>Polaris AI Studio was born from the belief that technology should not replace human creativity—but empower it. Founded by a parent, engineer, and storyteller, our studio blends artificial intelligence with human warmth to create tools, stories, and solutions that illuminate life's journey.</p>
                     
-                    <p>We are committed to creating technology that enhances rather than replaces human connection, fostering environments where children can learn, grow, and thrive alongside their families. Our AI solutions are designed with safety, privacy, and developmental appropriateness at their core.</p>
+                    <p>Like Polaris—the North Star that guides explorers through the unknown—we aim to guide families, learners, and creators into a future where AI is accessible, joyful, and purpose-driven.</p>
                     
-                    <p>Like the North Star that guides travelers, Polaris AI Studio serves as a guiding light for families navigating the digital age, ensuring that technology becomes a tool for strengthening bonds and accelerating learning.</p>
+                    <p>Whether we're building intelligent platforms, writing children's books, or designing secure digital tools, we do it with a singular mission: <strong>To help people create, protect, and grow—guided by intelligence, powered by heart.</strong></p>
+                    
+                    <p>We build across four core areas: AI-powered creative tools, self-published children's books, cybersecurity & cloud consulting, and family-focused health insurance services. We believe that AI should amplify humanity—not replace it.</p>
                 </div>
                 <div class="mission-visual fade-in">
                     <div class="mission-icon">
-                        🚀
+                        ⭐
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="section">
+    <!-- Services Section -->
+    <section id="services" class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Our Products</h2>
-                <p>AI-powered solutions designed specifically for family needs and children's educational development</p>
+                <h2>Our Services</h2>
+                <p>Four core areas where AI meets human purpose to create meaningful impact</p>
             </div>
             <div class="products-grid">
                 <div class="product-card fade-in">
+                    <div class="product-icon">🧠</div>
+                    <h3>Polaris Forge (AI Tools & Platforms)</h3>
+                    <p><strong>Build. Automate. Secure. Forge with Polaris.</strong><br><br>Our innovation engine building intelligent tools for creators and small businesses. From AI-powered resume optimizers to story generators, Streamlit apps, and MLOps pipelines—we combine machine learning with design into tools you can deploy today.</p>
+                </div>
+                
+                <div class="product-card fade-in">
                     <div class="product-icon">📚</div>
-                    <h3>Smart Learning Companion</h3>
-                    <p>An adaptive AI tutor that personalizes learning experiences for children of all ages. It understands each child's learning style, pace, and interests to create engaging educational content that grows with them.</p>
+                    <h3>Books by Polaris</h3>
+                    <p><strong>Stories powered by love—and a little AI magic.</strong><br><br>Beautiful, heartwarming children's books for modern families. Bilingual stories (English-Chinese), personalized editions with grandma names, titles like "You Were Chosen Twice" and "10 Reasons Grandma is Cooler Than a Superhero." Published on Amazon KDP with print-on-demand.</p>
                 </div>
                 
                 <div class="product-card fade-in">
-                    <div class="product-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Family Harmony Hub</h3>
-                    <p>A comprehensive family management system that helps coordinate schedules, track development milestones, and facilitate meaningful family activities. It learns from your family's patterns to suggest optimal times for bonding and learning.</p>
+                    <div class="product-icon">🔐</div>
+                    <h3>Cybersecurity & Cloud Consulting</h3>
+                    <p><strong>Protecting what matters most.</strong><br><br>Freelance cybersecurity and DevOps consulting services. We help families, creators, and small businesses secure their digital presence through smart cloud architecture, automated security protocols, and privacy-focused solutions.</p>
                 </div>
                 
                 <div class="product-card fade-in">
-                    <div class="product-icon">🌟</div>
-                    <h3>Developmental Insights</h3>
-                    <p>Advanced analytics platform that tracks children's cognitive, emotional, and social development through safe, privacy-focused interactions. Provides parents and educators with actionable insights to support growth.</p>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-icon">🎨</div>
-                    <h3>Creative Expression Engine</h3>
-                    <p>AI-powered creative tools that encourage artistic expression and imagination. From storytelling to digital art, this platform helps children explore their creativity while developing critical thinking skills.</p>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-icon">🛡️</div>
-                    <h3>Safe Space Guardian</h3>
-                    <p>Intelligent content filtering and digital wellness monitoring that ensures children's online experiences remain age-appropriate and beneficial. Protects while promoting healthy digital habits.</p>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-icon">🌱</div>
-                    <h3>Growth Pathway Planner</h3>
-                    <p>Long-term educational planning AI that helps families set and achieve developmental goals. Creates personalized roadmaps for skill building and academic success based on individual strengths and interests.</p>
+                    <div class="product-icon">🏥</div>
+                    <h3>Polaris Benefits (Health Insurance)</h3>
+                    <p><strong>Helping families navigate healthcare—with care.</strong><br><br>Licensed health insurance services in Texas specializing in ACA guidance, personalized plan comparison, bilingual support (English/Chinese), and AI-powered form automation. Making healthcare enrollment less stressful for families and immigrants.</p>
                 </div>
             </div>
         </div>
@@ -525,9 +513,13 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2>Ready to Transform Your Family's Future?</h2>
-            <p>Join us in revolutionizing how families interact with technology. Let's build AI solutions that truly serve your needs.</p>
-            <a href="mailto:nimbusforge.ai@gmail.com" class="contact-button">Get in Touch</a>
+            <h2>Work With Us</h2>
+            <p>Interested in collaborating, publishing, or building something meaningful with AI? Let's create tools, stories, and solutions that illuminate life's journey.</p>
+            <div style="margin: 2rem 0;">
+                <p style="margin-bottom: 1rem; opacity: 0.9;">🛠 <strong>Partnerships:</strong> Creative publishing support, AI tool design & deployment, freelance cybersecurity & DevOps consulting, family-focused product collaborations</p>
+                <p style="margin-bottom: 1rem; opacity: 0.9;">🌐 <strong>Website:</strong> https://polarisaistudio.github.io/</p>
+            </div>
+            <a href="mailto:nimbusforge.ai@gmail.com" class="contact-button">📬 Get in Touch</a>
         </div>
     </section>
 
