@@ -1,358 +1,587 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Polaris AI Studio</title>
-    <meta name="description" content="Privacy Policy for Polaris AI Studio - How we collect, use, and protect your information.">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy Policy - Polaris AI Studio</title>
+        <meta
+            name="description"
+            content="Privacy Policy for Polaris AI Studio - How we collect, use, and protect your information."
+        />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.8;
-            color: #1a1a1a;
-            background: #f7fafc;
-        }
+            body {
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    sans-serif;
+                line-height: 1.8;
+                color: #1a1a1a;
+                background: #f7fafc;
+                padding-top: 80px;
+            }
 
-        .navbar {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+            .navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                z-index: 1000;
+                padding: 1rem 0;
+                transition: all 0.3s ease;
+            }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            .nav-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
+            .logo {
+                font-size: 1.5rem;
+                font-weight: 700;
+                background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+            }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
+            .nav-links {
+                display: flex;
+                list-style: none;
+                gap: 2rem;
+            }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+            .nav-links a {
+                text-decoration: none;
+                color: #4a5568;
+                font-weight: 500;
+                transition: color 0.3s ease;
+                position: relative;
+            }
 
-        .last-updated {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
+            .nav-links a:hover {
+                color: #06b6d4;
+            }
 
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
+            .nav-links a::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+                transition: width 0.3s ease;
+            }
 
-        h3 {
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-            color: #4a5568;
-        }
+            .nav-links a:hover::after {
+                width: 100%;
+            }
 
-        p {
-            margin-bottom: 1.25rem;
-            color: #4a5568;
-        }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 4rem 2rem;
+            }
 
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1.25rem;
-            color: #4a5568;
-        }
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+            .last-updated {
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 2rem;
+            }
 
-        .policy-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
+            h2 {
+                font-size: 1.8rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+                color: #2d3748;
+            }
 
-        a {
-            color: #06b6d4;
-            text-decoration: none;
-        }
+            h3 {
+                font-size: 1.3rem;
+                margin-top: 2rem;
+                margin-bottom: 0.75rem;
+                color: #4a5568;
+            }
 
-        a:hover {
-            text-decoration: underline;
-        }
+            p {
+                margin-bottom: 1.25rem;
+                color: #4a5568;
+            }
 
-        .contact-box {
-            background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-top: 2rem;
-        }
+            ul,
+            ol {
+                margin-left: 2rem;
+                margin-bottom: 1.25rem;
+                color: #4a5568;
+            }
 
-        .contact-box h3 {
-            color: white;
-            margin-top: 0;
-        }
+            li {
+                margin-bottom: 0.5rem;
+            }
 
-        .contact-box a {
-            color: white;
-            font-weight: 600;
-        }
+            .policy-section {
+                background: white;
+                padding: 2rem;
+                border-radius: 10px;
+                margin-bottom: 2rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
 
-        .footer {
-            background: #1a202c;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="Polaris AI Studio" style="height: 40px; width: auto; margin-right: 10px; vertical-align: middle;">
-                Polaris AI Studio
-            </a>
-        </div>
-    </nav>
+            a {
+                color: #06b6d4;
+                text-decoration: none;
+            }
 
-    <!-- Privacy Policy Content -->
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: October 25, 2025</p>
+            a:hover {
+                text-decoration: underline;
+            }
 
-        <div class="policy-section">
-            <h2>1. Introduction</h2>
-            <p>
-                Polaris AI Studio ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our applications, websites, and services (collectively, the "Services").
-            </p>
-            <p>
-                Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access our Services.
-            </p>
-        </div>
+            .contact-box {
+                background: white;
+                border: 2px solid #e2e8f0;
+                padding: 2rem;
+                border-radius: 10px;
+                margin-top: 2rem;
+            }
 
-        <div class="policy-section">
-            <h2>2. Information We Collect</h2>
+            .contact-box h3 {
+                color: #2d3748;
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
 
-            <h3>2.1 Personal Information</h3>
-            <p>We may collect personal information that you voluntarily provide to us when you:</p>
-            <ul>
-                <li>Register for our services</li>
-                <li>Use our applications</li>
-                <li>Contact us for support</li>
-                <li>Subscribe to our newsletters or communications</li>
-                <li>Participate in surveys or provide feedback</li>
-            </ul>
-            <p>This information may include:</p>
-            <ul>
-                <li>Name and contact information (email address, phone number, mailing address)</li>
-                <li>Account credentials (username, password)</li>
-                <li>Profile information</li>
-                <li>Payment and billing information (processed securely through third-party payment processors)</li>
-                <li>Communications with us</li>
-            </ul>
+            .contact-box a {
+                color: #06b6d4;
+                font-weight: 600;
+                text-decoration: none;
+            }
 
-            <h3>2.2 Automatically Collected Information</h3>
-            <p>When you use our Services, we may automatically collect certain information, including:</p>
-            <ul>
-                <li>Device information (device type, operating system, unique device identifiers)</li>
-                <li>Usage data (app features used, interaction data, session duration)</li>
-                <li>Log data (IP address, browser type, access times, pages viewed)</li>
-                <li>Location data (with your permission)</li>
-            </ul>
+            .contact-box a:hover {
+                text-decoration: underline;
+            }
 
-            <h3>2.3 Information from Third Parties</h3>
-            <p>We may receive information from third-party services you connect to our applications, such as social media platforms or authentication services.</p>
-        </div>
+            .contact-box p {
+                color: #4a5568;
+            }
 
-        <div class="policy-section">
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the information we collect for the following purposes:</p>
-            <ul>
-                <li>To provide, maintain, and improve our Services</li>
-                <li>To process transactions and send related information</li>
-                <li>To respond to your comments, questions, and customer service requests</li>
-                <li>To send you technical notices, updates, security alerts, and support messages</li>
-                <li>To communicate with you about products, services, offers, and events</li>
-                <li>To monitor and analyze trends, usage, and activities</li>
-                <li>To personalize and improve your experience</li>
-                <li>To detect, prevent, and address technical issues and security threats</li>
-                <li>To comply with legal obligations</li>
-            </ul>
-        </div>
+            .footer {
+                background: #1a202c;
+                color: white;
+                text-align: center;
+                padding: 2rem 0;
+                margin-top: 4rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img
+                        src="logo.png"
+                        alt="Polaris AI Studio"
+                        style="
+                            height: 40px;
+                            width: auto;
+                            margin-right: 10px;
+                            vertical-align: middle;
+                        "
+                    />
+                    Polaris AI Studio
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-        <div class="policy-section">
-            <h2>4. How We Share Your Information</h2>
-            <p>We may share your information in the following circumstances:</p>
-
-            <h3>4.1 Service Providers</h3>
-            <p>We may share your information with third-party service providers who perform services on our behalf, such as:</p>
-            <ul>
-                <li>Cloud hosting and storage providers</li>
-                <li>Payment processors</li>
-                <li>Analytics providers</li>
-                <li>Customer support services</li>
-            </ul>
-
-            <h3>4.2 Legal Requirements</h3>
-            <p>We may disclose your information if required by law or in response to valid requests by public authorities.</p>
-
-            <h3>4.3 Business Transfers</h3>
-            <p>We may share or transfer your information in connection with a merger, sale, acquisition, or other business transaction.</p>
-
-            <h3>4.4 With Your Consent</h3>
-            <p>We may share your information with your consent or at your direction.</p>
-
-            <p><strong>We do not sell your personal information to third parties.</strong></p>
-        </div>
-
-        <div class="policy-section">
-            <h2>5. AI and Data Processing</h2>
-            <p>
-                Polaris AI Studio develops AI-powered applications and tools. When you use our AI features:
-            </p>
-            <ul>
-                <li>Your input data may be processed to provide AI-generated responses or content</li>
-                <li>We may use aggregated, anonymized data to improve our AI models</li>
-                <li>We implement appropriate safeguards to protect your data during AI processing</li>
-                <li>You retain ownership of content you create using our tools</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2>6. Data Security</h2>
-            <p>
-                We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
-            </p>
-            <ul>
-                <li>Encryption of data in transit and at rest</li>
-                <li>Regular security assessments and updates</li>
-                <li>Access controls and authentication</li>
-                <li>Secure coding practices</li>
-            </ul>
-            <p>
-                However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2>7. Data Retention</h2>
-            <p>
-                We retain your personal information for as long as necessary to provide our Services, comply with legal obligations, resolve disputes, and enforce our agreements. When we no longer need your information, we will securely delete or anonymize it.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2>8. Your Rights and Choices</h2>
-            <p>Depending on your location, you may have the following rights:</p>
-            <ul>
-                <li><strong>Access:</strong> Request access to your personal information</li>
-                <li><strong>Correction:</strong> Request correction of inaccurate information</li>
-                <li><strong>Deletion:</strong> Request deletion of your personal information</li>
-                <li><strong>Portability:</strong> Request a copy of your data in a portable format</li>
-                <li><strong>Objection:</strong> Object to certain processing of your information</li>
-                <li><strong>Withdraw Consent:</strong> Withdraw consent where we rely on it</li>
-            </ul>
-            <p>To exercise these rights, please contact us at <a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a>.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2>9. Children's Privacy</h2>
-            <p>
-                Our Services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe we have collected information about a child, please contact us immediately.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2>10. International Data Transfers</h2>
-            <p>
-                Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2>11. Third-Party Links and Services</h2>
-            <p>
-                Our Services may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2>12. California Privacy Rights</h2>
-            <p>
-                If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information we collect, use, and disclose, and the right to delete your personal information.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2>13. Changes to This Privacy Policy</h2>
-            <p>
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically.
-            </p>
-        </div>
-
-        <div class="contact-box">
-            <h3>Contact Us</h3>
-            <p>
-                If you have questions or concerns about this Privacy Policy or our privacy practices, please contact us:
-            </p>
-            <p>
-                <strong>Email:</strong> <a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a><br>
-                <strong>Website:</strong> <a href="https://polarisaistudio.com">https://polarisaistudio.com</a>
-            </p>
-            <p>
-                <strong>Polaris AI Studio</strong><br>
-                Building the future of family-centered AI
-            </p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
+        <!-- Privacy Policy Content -->
         <div class="container">
-            <p>&copy; 2025 Polaris AI Studio. All rights reserved.</p>
-            <p style="margin-top: 0.5rem;">
-                <a href="index.html" style="color: white; margin: 0 1rem;">Home</a> |
-                <a href="privacy.html" style="color: white; margin: 0 1rem;">Privacy Policy</a> |
-                <a href="support.html" style="color: white; margin: 0 1rem;">Support</a>
-            </p>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: October 25, 2025</p>
+
+            <div class="policy-section">
+                <h2>1. Introduction</h2>
+                <p>
+                    Polaris AI Studio ("we," "our," or "us") is committed to
+                    protecting your privacy. This Privacy Policy explains how we
+                    collect, use, disclose, and safeguard your information when
+                    you use our applications, websites, and services
+                    (collectively, the "Services").
+                </p>
+                <p>
+                    Please read this privacy policy carefully. If you do not
+                    agree with the terms of this privacy policy, please do not
+                    access our Services.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>2. Information We Collect</h2>
+
+                <h3>2.1 Personal Information</h3>
+                <p>
+                    We may collect personal information that you voluntarily
+                    provide to us when you:
+                </p>
+                <ul>
+                    <li>Register for our services</li>
+                    <li>Use our applications</li>
+                    <li>Contact us for support</li>
+                    <li>Subscribe to our newsletters or communications</li>
+                    <li>Participate in surveys or provide feedback</li>
+                </ul>
+                <p>This information may include:</p>
+                <ul>
+                    <li>
+                        Name and contact information (email address, phone
+                        number, mailing address)
+                    </li>
+                    <li>Account credentials (username, password)</li>
+                    <li>Profile information</li>
+                    <li>
+                        Payment and billing information (processed securely
+                        through third-party payment processors)
+                    </li>
+                    <li>Communications with us</li>
+                </ul>
+
+                <h3>2.2 Automatically Collected Information</h3>
+                <p>
+                    When you use our Services, we may automatically collect
+                    certain information, including:
+                </p>
+                <ul>
+                    <li>
+                        Device information (device type, operating system,
+                        unique device identifiers)
+                    </li>
+                    <li>
+                        Usage data (app features used, interaction data, session
+                        duration)
+                    </li>
+                    <li>
+                        Log data (IP address, browser type, access times, pages
+                        viewed)
+                    </li>
+                    <li>Location data (with your permission)</li>
+                </ul>
+
+                <h3>2.3 Information from Third Parties</h3>
+                <p>
+                    We may receive information from third-party services you
+                    connect to our applications, such as social media platforms
+                    or authentication services.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>3. How We Use Your Information</h2>
+                <p>
+                    We use the information we collect for the following
+                    purposes:
+                </p>
+                <ul>
+                    <li>To provide, maintain, and improve our Services</li>
+                    <li>
+                        To process transactions and send related information
+                    </li>
+                    <li>
+                        To respond to your comments, questions, and customer
+                        service requests
+                    </li>
+                    <li>
+                        To send you technical notices, updates, security alerts,
+                        and support messages
+                    </li>
+                    <li>
+                        To communicate with you about products, services,
+                        offers, and events
+                    </li>
+                    <li>
+                        To monitor and analyze trends, usage, and activities
+                    </li>
+                    <li>To personalize and improve your experience</li>
+                    <li>
+                        To detect, prevent, and address technical issues and
+                        security threats
+                    </li>
+                    <li>To comply with legal obligations</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>4. How We Share Your Information</h2>
+                <p>
+                    We may share your information in the following
+                    circumstances:
+                </p>
+
+                <h3>4.1 Service Providers</h3>
+                <p>
+                    We may share your information with third-party service
+                    providers who perform services on our behalf, such as:
+                </p>
+                <ul>
+                    <li>Cloud hosting and storage providers</li>
+                    <li>Payment processors</li>
+                    <li>Analytics providers</li>
+                    <li>Customer support services</li>
+                </ul>
+
+                <h3>4.2 Legal Requirements</h3>
+                <p>
+                    We may disclose your information if required by law or in
+                    response to valid requests by public authorities.
+                </p>
+
+                <h3>4.3 Business Transfers</h3>
+                <p>
+                    We may share or transfer your information in connection with
+                    a merger, sale, acquisition, or other business transaction.
+                </p>
+
+                <h3>4.4 With Your Consent</h3>
+                <p>
+                    We may share your information with your consent or at your
+                    direction.
+                </p>
+
+                <p>
+                    <strong
+                        >We do not sell your personal information to third
+                        parties.</strong
+                    >
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>5. AI and Data Processing</h2>
+                <p>
+                    Polaris AI Studio develops AI-powered applications and
+                    tools. When you use our AI features:
+                </p>
+                <ul>
+                    <li>
+                        Your input data may be processed to provide AI-generated
+                        responses or content
+                    </li>
+                    <li>
+                        We may use aggregated, anonymized data to improve our AI
+                        models
+                    </li>
+                    <li>
+                        We implement appropriate safeguards to protect your data
+                        during AI processing
+                    </li>
+                    <li>
+                        You retain ownership of content you create using our
+                        tools
+                    </li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>6. Data Security</h2>
+                <p>
+                    We implement appropriate technical and organizational
+                    security measures to protect your personal information
+                    against unauthorized access, alteration, disclosure, or
+                    destruction. These measures include:
+                </p>
+                <ul>
+                    <li>Encryption of data in transit and at rest</li>
+                    <li>Regular security assessments and updates</li>
+                    <li>Access controls and authentication</li>
+                    <li>Secure coding practices</li>
+                </ul>
+                <p>
+                    However, no method of transmission over the Internet or
+                    electronic storage is 100% secure. While we strive to
+                    protect your information, we cannot guarantee absolute
+                    security.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>7. Data Retention</h2>
+                <p>
+                    We retain your personal information for as long as necessary
+                    to provide our Services, comply with legal obligations,
+                    resolve disputes, and enforce our agreements. When we no
+                    longer need your information, we will securely delete or
+                    anonymize it.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>8. Your Rights and Choices</h2>
+                <p>
+                    Depending on your location, you may have the following
+                    rights:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Access:</strong> Request access to your personal
+                        information
+                    </li>
+                    <li>
+                        <strong>Correction:</strong> Request correction of
+                        inaccurate information
+                    </li>
+                    <li>
+                        <strong>Deletion:</strong> Request deletion of your
+                        personal information
+                    </li>
+                    <li>
+                        <strong>Portability:</strong> Request a copy of your
+                        data in a portable format
+                    </li>
+                    <li>
+                        <strong>Objection:</strong> Object to certain processing
+                        of your information
+                    </li>
+                    <li>
+                        <strong>Withdraw Consent:</strong> Withdraw consent
+                        where we rely on it
+                    </li>
+                </ul>
+                <p>
+                    To exercise these rights, please contact us at
+                    <a href="mailto:info@polarisaistudio.com"
+                        >info@polarisaistudio.com</a
+                    >.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>9. Children's Privacy</h2>
+                <p>
+                    Our Services are not directed to children under the age of
+                    13. We do not knowingly collect personal information from
+                    children under 13. If you are a parent or guardian and
+                    believe we have collected information about a child, please
+                    contact us immediately.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>10. International Data Transfers</h2>
+                <p>
+                    Your information may be transferred to and processed in
+                    countries other than your country of residence. These
+                    countries may have different data protection laws. We ensure
+                    appropriate safeguards are in place to protect your
+                    information in accordance with this Privacy Policy.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>11. Third-Party Links and Services</h2>
+                <p>
+                    Our Services may contain links to third-party websites or
+                    services. We are not responsible for the privacy practices
+                    of these third parties. We encourage you to review their
+                    privacy policies.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>12. California Privacy Rights</h2>
+                <p>
+                    If you are a California resident, you have specific rights
+                    under the California Consumer Privacy Act (CCPA), including
+                    the right to know what personal information we collect, use,
+                    and disclose, and the right to delete your personal
+                    information.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2>13. Changes to This Privacy Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. We will
+                    notify you of any changes by posting the new Privacy Policy
+                    on this page and updating the "Last Updated" date. We
+                    encourage you to review this Privacy Policy periodically.
+                </p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Contact Us</h3>
+                <p>
+                    If you have questions or concerns about this Privacy Policy
+                    or our privacy practices, please contact us:
+                </p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@polarisaistudio.com"
+                        >info@polarisaistudio.com</a
+                    ><br />
+                    <strong>Website:</strong>
+                    <a href="https://polarisaistudio.com"
+                        >https://polarisaistudio.com</a
+                    >
+                </p>
+                <p>
+                    <strong>Polaris AI Studio</strong><br />
+                    Building the future of family-centered AI
+                </p>
+            </div>
         </div>
-    </footer>
-</body>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Polaris AI Studio. All rights reserved.</p>
+                <p style="margin-top: 0.5rem">
+                    <a href="index.html" style="color: white; margin: 0 1rem"
+                        >Home</a
+                    >
+                    |
+                    <a href="privacy.html" style="color: white; margin: 0 1rem"
+                        >Privacy Policy</a
+                    >
+                    |
+                    <a href="support.html" style="color: white; margin: 0 1rem"
+                        >Support</a
+                    >
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
