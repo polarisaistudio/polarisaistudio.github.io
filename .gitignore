@@ -1,0 +1,42 @@
+# Private documents and drafts
+private/
+*.draft.md
+*.private.md
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build outputs (if applicable)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Node modules (if using npm/yarn)
+node_modules/
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
