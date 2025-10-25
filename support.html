@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Polaris AI Studio</title>
+    <meta name="description" content="Get support for Polaris AI Studio products and services. Contact us for help with AI tools, apps, and consulting services.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f7fafc;
+        }
+
+        .navbar {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4f46e5 0%, #2563eb 50%, #1e40af 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .support-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .support-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .support-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .support-card p {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .support-card a {
+            color: #06b6d4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .support-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+            color: #06b6d4;
+        }
+
+        .contact-item-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .contact-item-content p {
+            color: #4a5568;
+        }
+
+        .contact-item-content a {
+            color: #06b6d4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item-content a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem;
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #4f46e5;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Polaris AI Studio" style="height: 40px; width: auto; margin-right: 10px; vertical-align: middle;">
+                Polaris AI Studio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="nav-container">
+            <h1>How Can We Help You?</h1>
+            <p>We're here to support you with all Polaris AI Studio products and services</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Support Options -->
+        <div class="support-grid">
+            <div class="support-card">
+                <div class="support-icon">📧</div>
+                <h3>Email Support</h3>
+                <p>Get help with any questions or issues. We typically respond within 24-48 hours.</p>
+                <a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a>
+            </div>
+
+            <div class="support-card">
+                <div class="support-icon">🛠️</div>
+                <h3>Technical Support</h3>
+                <p>Need help with our AI tools or apps? Our technical team is ready to assist with troubleshooting and guidance.</p>
+                <a href="mailto:info@polarisaistudio.com?subject=Technical%20Support">Contact Technical Support</a>
+            </div>
+
+            <div class="support-card">
+                <div class="support-icon">💬</div>
+                <h3>General Inquiries</h3>
+                <p>Questions about our services, partnerships, or publishing? We'd love to hear from you.</p>
+                <a href="mailto:info@polarisaistudio.com?subject=General%20Inquiry">Send an Inquiry</a>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-section">
+            <h2>Contact Information</h2>
+            <p>Reach out to us through any of the following channels:</p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div class="contact-item-content">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">🌐</div>
+                    <div class="contact-item-content">
+                        <h4>Website</h4>
+                        <p><a href="https://polarisaistudio.com">https://polarisaistudio.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">⏰</div>
+                    <div class="contact-item-content">
+                        <h4>Response Time</h4>
+                        <p>24-48 hours (Monday - Friday)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem; background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What services does Polaris AI Studio offer?</h3>
+                <p>We offer four core services: AI-powered creative tools and platforms (Polaris Forge), self-published children's books (Books by Polaris), cybersecurity & cloud consulting, and health insurance services with bilingual support (Polaris Benefits).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I get support for your mobile apps?</h3>
+                <p>For any app-related questions or technical issues, please email us at <a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a> with your device information, app version, and a description of the issue. We'll respond as quickly as possible.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer custom AI tool development?</h3>
+                <p>Yes! We provide freelance AI tool design and deployment services. Contact us at <a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a> to discuss your project requirements.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I purchase your children's books?</h3>
+                <p>Our children's books are available on Amazon through our KDP publishing. We offer both digital and print-on-demand editions with bilingual (English-Chinese) options.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is your privacy policy?</h3>
+                <p>We take your privacy seriously. You can read our complete privacy policy <a href="privacy.html">here</a>. We never sell your personal information to third parties.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How can I report a bug or request a feature?</h3>
+                <p>We welcome your feedback! Please send bug reports or feature requests to <a href="mailto:info@polarisaistudio.com">info@polarisaistudio.com</a> with as much detail as possible. Your input helps us improve our products.</p>
+            </div>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="cta-box">
+            <h2>Still Have Questions?</h2>
+            <p>We're here to help. Send us a message and we'll get back to you within 24-48 hours.</p>
+            <a href="mailto:info@polarisaistudio.com" class="cta-button">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Polaris AI Studio. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="index.html">Home</a> |
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="support.html">Support</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
