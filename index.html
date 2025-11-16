@@ -1,1110 +1,450 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polaris AI Studio - Stop Wasting 20+ Hours Per Week on Repetitive Tasks</title>
-    <meta name="description" content="Custom AI automation that handles your busywork so you can focus on growing your business. Save 15-30 hours per week. Live in 2-4 weeks.">
+    <title>Polaris AI Studio - AI Automation for Small Business</title>
+    <meta name="description" content="Custom AI automation that saves your team 20+ hours per week. Stop wasting time on repetitive tasks.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png" alt="Polaris AI Studio" class="logo-img">
-                <span>Polaris AI Studio</span>
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                    <span class="text-xl font-bold text-gray-900">Polaris AI</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#solutions" class="text-gray-600 hover:text-gray-900 transition">Solutions</a>
+                    <a href="case-studies.html" class="text-gray-600 hover:text-gray-900 transition">Case Studies</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
+                    <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#scenarios">Examples</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="https://calendly.com/polarisaistudio/introduction-call" class="nav-cta">Get Started</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#solutions" class="block text-gray-600 hover:text-gray-900">Solutions</a>
+                <a href="case-studies.html" class="block text-gray-600 hover:text-gray-900">Case Studies</a>
+                <a href="pricing.html" class="block text-gray-600 hover:text-gray-900">Pricing</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="https://calendly.com/polarisaistudio/introduction-call"
+                   class="block px-5 py-2 gradient-bg text-white rounded-full text-center">
+                    Get Started
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- SECTION 1: HERO / INSTANT CLARITY -->
-    <section id="home" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-headline">Stop Wasting 20+ Hours Per Week on Repetitive Tasks</h1>
-                <p class="hero-subheadline">Custom AI automation that handles your busywork—so you and your team can focus on growing your business.</p>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div class="space-y-8">
+                    <div class="inline-block">
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">
+                            🚀 Save 20+ Hours Per Week
+                        </span>
+                    </div>
 
-                <div class="value-props">
-                    <div class="value-prop">
-                        <span class="checkmark">✓</span>
-                        <span>Save 15-30 hours per week on repetitive tasks</span>
+                    <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight">
+                        AI Automation
+                        <span class="gradient-text">Built for Your Business</span>
+                    </h1>
+
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Stop wasting time on repetitive tasks. We build custom AI solutions that automate your workflows,
+                        answer customer questions 24/7, and help you scale without hiring.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://calendly.com/polarisaistudio/introduction-call"
+                           class="px-8 py-4 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition text-center">
+                            Book Free Assessment
+                        </a>
+                        <a href="#demo"
+                           class="px-8 py-4 bg-white border-2 border-gray-200 text-gray-900 rounded-lg font-semibold hover:border-gray-300 transition text-center">
+                            See Demo
+                        </a>
                     </div>
-                    <div class="value-prop">
-                        <span class="checkmark">✓</span>
-                        <span>Custom-built for your specific business (not generic software)</span>
-                    </div>
-                    <div class="value-prop">
-                        <span class="checkmark">✓</span>
-                        <span>Live in 2-4 weeks | See ROI in 2-3 months</span>
+
+                    <!-- Trust Signals -->
+                    <div class="flex items-center gap-8 pt-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-900">70%</div>
+                            <div class="text-sm text-gray-600">Time Saved</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-900">2-4 Weeks</div>
+                            <div class="text-sm text-gray-600">To Go Live</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-900">$100K+</div>
+                            <div class="text-sm text-gray-600">Costs Saved</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="cta-group">
-                    <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-primary btn-large">Get Your Free Automation Assessment</a>
-                    <a href="#scenarios" class="btn btn-secondary">See Real Examples</a>
+                <!-- Right: Visual Demo -->
+                <div class="relative">
+                    <div class="relative z-10 bg-white rounded-2xl shadow-2xl p-6 border border-gray-100">
+                        <!-- Chat Demo -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 pb-4 border-b border-gray-100">
+                                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">AI Assistant</div>
+                                    <div class="text-xs text-green-600">● Online</div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Question -->
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    </svg>
+                                </div>
+                                <div class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-xs">
+                                    <p class="text-sm text-gray-700">Where's my order? #12345</p>
+                                    <p class="text-xs text-gray-500 mt-1">10:24 AM</p>
+                                </div>
+                            </div>
+
+                            <!-- AI Response -->
+                            <div class="flex gap-3 justify-end">
+                                <div class="gradient-bg rounded-2xl rounded-tr-none px-4 py-3 max-w-xs">
+                                    <p class="text-sm text-white">Your order #12345 shipped yesterday and will arrive tomorrow by 5pm. Track it here: track.com/12345</p>
+                                    <p class="text-xs text-indigo-200 mt-1">10:24 AM</p>
+                                </div>
+                                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="text-center pt-2">
+                                <span class="text-xs text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
+                                    ⚡ Responded in &lt;1 second
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-indigo-100 rounded-full opacity-50 blur-3xl"></div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-cyan-100 rounded-full opacity-50 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Preview -->
+    <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    How We <span class="gradient-text">Help You</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Custom AI automation for the tasks draining your team's time
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
+                <div class="group p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Customer Support</h3>
+                    <p class="text-gray-600 mb-4">AI chatbots that handle 80% of customer questions instantly—day or night.</p>
+
+                    <a href="solutions.html#customer-support" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="trust-badges">
-                    <span>Trusted by growing businesses</span>
-                    <span>|</span>
-                    <span>$100K+ saved in operational costs</span>
-                    <span>|</span>
-                    <span>70%+ average time savings</span>
+                <!-- Solution 2 -->
+                <div class="group p-8 bg-gradient-to-br from-cyan-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Workflow Automation</h3>
+                    <p class="text-gray-600 mb-4">Eliminate manual data entry, email sorting, and document processing.</p>
+
+                    <a href="solutions.html#workflow" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="group p-8 bg-gradient-to-br from-purple-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Solutions</h3>
+                    <p class="text-gray-600 mb-4">Unique business challenge? We build AI tools tailored to your exact needs.</p>
+
+                    <a href="solutions.html#custom" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Trusted by Growing Businesses
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Our AI handles 80% of customer emails automatically. We've saved $2,000/month and customers get instant responses."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-cyan-400"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Sarah M.</div>
+                            <div class="text-sm text-gray-600">E-commerce Store Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "We avoided hiring 3 people. The automation scaled with us and saved over $100K in hiring costs."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Jennifer L.</div>
+                            <div class="text-sm text-gray-600">SaaS Company COO</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "My team can finally focus on advising clients instead of data entry. Best investment we've made."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Michael R.</div>
+                            <div class="text-sm text-gray-600">Managing Partner</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-visual">
-                <div class="hero-image-container">
-                    <svg class="hero-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <!-- Before: Chaos -->
-                        <g class="before-state">
-                            <circle cx="150" cy="150" r="8" fill="#ef4444" opacity="0.6"/>
-                            <circle cx="200" cy="180" r="6" fill="#ef4444" opacity="0.6"/>
-                            <circle cx="180" cy="120" r="7" fill="#ef4444" opacity="0.6"/>
-                            <circle cx="220" cy="150" r="5" fill="#ef4444" opacity="0.6"/>
-                            <text x="140" y="240" font-size="14" fill="#666" font-weight="600">Before: Chaos</text>
-                        </g>
-                        <!-- Arrow -->
-                        <path d="M 250 150 L 320 150" stroke="url(#heroGradient)" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-                        <defs>
-                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                                <polygon points="0 0, 10 3, 0 6" fill="#4f46e5" />
-                            </marker>
-                        </defs>
-                        <!-- After: Organized -->
-                        <g class="after-state">
-                            <rect x="340" y="110" width="100" height="80" rx="8" fill="url(#heroGradient)" opacity="0.1" stroke="url(#heroGradient)" stroke-width="2"/>
-                            <circle cx="370" cy="135" r="4" fill="#10b981"/>
-                            <circle cx="370" cy="155" r="4" fill="#10b981"/>
-                            <circle cx="410" cy="135" r="4" fill="#10b981"/>
-                            <circle cx="410" cy="155" r="4" fill="#10b981"/>
-                            <text x="325" y="240" font-size="14" fill="#666" font-weight="600">After: Automated</text>
-                        </g>
-                        <!-- Robot icon -->
-                        <g transform="translate(200, 280)">
-                            <circle cx="50" cy="50" r="45" fill="url(#heroGradient)" opacity="0.1"/>
-                            <rect x="30" y="35" width="40" height="30" rx="5" fill="url(#heroGradient)"/>
-                            <circle cx="40" cy="48" r="3" fill="white"/>
-                            <circle cx="60" cy="48" r="3" fill="white"/>
-                            <rect x="45" y="58" width="10" height="2" rx="1" fill="white"/>
-                        </g>
+            <div class="text-center mt-12">
+                <a href="case-studies.html" class="inline-flex items-center text-indigo-600 font-semibold text-lg hover:gap-2 transition-all">
+                    Read Full Case Studies
+                    <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="gradient-bg rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-4">Ready to Automate Your Business?</h2>
+                    <p class="text-xl mb-8 text-indigo-100">
+                        Book a free 30-minute assessment. We'll show you exactly what's possible.
+                    </p>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Schedule Free Assessment
+                    </a>
+                    <p class="mt-4 text-sm text-indigo-200">No credit card required • 30-day money-back guarantee</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: "DOES THIS SOUND FAMILIAR?" (Problem Agitation) -->
-    <section id="problems" class="section problems-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Is Your Business Stuck in Busywork?</h2>
-            </div>
-
-            <div class="pain-points-grid">
-                <div class="pain-card">
-                    <div class="pain-icon">📧</div>
-                    <h3>Drowning in Emails</h3>
-                    <p>Your team spends hours answering the same questions over and over</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Polaris AI</span>
+                    </div>
+                    <p class="text-sm text-gray-400">AI Automation for Small Business</p>
                 </div>
 
-                <div class="pain-card">
-                    <div class="pain-icon">🕐</div>
-                    <h3>Missing After-Hours Opportunities</h3>
-                    <p>Potential customers reach out at night or weekends—and hear nothing back</p>
-                </div>
-
-                <div class="pain-card">
-                    <div class="pain-icon">📊</div>
-                    <h3>Buried in Data Entry</h3>
-                    <p>Manually copying information between systems eats up productive hours</p>
-                </div>
-
-                <div class="pain-card">
-                    <div class="pain-icon">😫</div>
-                    <h3>Team Burnout</h3>
-                    <p>Your best people are exhausted from repetitive admin work</p>
-                </div>
-
-                <div class="pain-card">
-                    <div class="pain-icon">💸</div>
-                    <h3>Can't Scale Without Hiring</h3>
-                    <p>More customers = more busy work = need more staff (but can't afford it)</p>
-                </div>
-
-                <div class="pain-card">
-                    <div class="pain-icon">⏱️</div>
-                    <h3>Slow Response Times</h3>
-                    <p>Customers wait hours (or days) for answers to simple questions</p>
-                </div>
-            </div>
-
-            <div class="closing-statement">
-                <p>You're not alone. The average small business wastes <strong>15-30 hours per week</strong> on tasks that could be automated.</p>
-                <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-primary">Let's Fix This</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: "HERE'S HOW WE HELP" (Solution Overview) -->
-    <section id="solutions" class="section solutions-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>AI Automation Custom-Built for Your Business</h2>
-                <p class="section-intro">We don't sell off-the-shelf software. We build AI solutions tailored specifically to YOUR processes, YOUR systems, and YOUR needs. Think of us as your AI implementation partner.</p>
-            </div>
-
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🤖</div>
-                    <h3>AI Customer Service</h3>
-                    <p class="solution-subtitle">Automatically handle 70-80% of customer inquiries</p>
-                    <ul class="solution-features">
-                        <li>24/7 availability (even when you sleep)</li>
-                        <li>Instant responses to common questions</li>
-                        <li>Seamlessly escalates complex issues to your team</li>
-                        <li>Integrates with your website, email, SMS</li>
-                    </ul>
-                    <p class="solution-savings">Typical savings: <strong>20+ hours/week</strong></p>
-                    <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-outline">Learn More</a>
-                </div>
-
-                <div class="solution-card featured">
-                    <div class="badge">Most Popular</div>
-                    <div class="solution-icon">⚡</div>
-                    <h3>Workflow Automation</h3>
-                    <p class="solution-subtitle">Eliminate manual, repetitive operational tasks</p>
-                    <ul class="solution-features">
-                        <li>Auto-process orders and invoices</li>
-                        <li>Intelligent email sorting and routing</li>
-                        <li>Automated data entry between systems</li>
-                        <li>Smart document processing</li>
-                    </ul>
-                    <p class="solution-savings">Typical savings: <strong>10-15 hours/week</strong></p>
-                    <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-outline">Learn More</a>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-icon">🎯</div>
-                    <h3>Custom AI Solutions</h3>
-                    <p class="solution-subtitle">Got a unique challenge? We'll build it.</p>
-                    <ul class="solution-features">
-                        <li>Custom AI tools for your specific process</li>
-                        <li>Integration with your existing systems</li>
-                        <li>Designed around how YOU work</li>
-                        <li>Ongoing optimization and support</li>
-                    </ul>
-                    <p class="solution-savings">Results vary by project</p>
-                    <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-outline">Talk to Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: REAL BUSINESS SCENARIOS -->
-    <section id="scenarios" class="section scenarios-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>See Yourself in These Stories?</h2>
-                <p class="section-intro">Real businesses, real problems, real results</p>
-            </div>
-
-            <div class="scenarios-container">
-                <!-- Scenario 1: E-commerce -->
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <h3>E-Commerce Store Overwhelmed by Inquiries</h3>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Business:</h4>
-                        <p>Mid-sized online retail store | 12 employees | $2M annual revenue | Growing fast</p>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Problem:</h4>
-                        <ul>
-                            <li>200+ customer emails per day</li>
-                            <li>60% are repetitive: "Where's my order?" "What's your return policy?" "Do you have this in blue?"</li>
-                            <li>Customer service team (2 people) working 10-hour days</li>
-                            <li>Response time: 4-8 hours (customers getting frustrated)</li>
-                            <li>Missing sales opportunities after 6pm and weekends</li>
-                            <li>Cost: $4,500/month in customer service labor</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>What We Built:</h4>
-                        <ul class="checkmark-list">
-                            <li>AI chatbot on website + email integration</li>
-                            <li>Trained on their product catalog, policies, and FAQs</li>
-                            <li>Connected to order tracking system</li>
-                            <li>Smart escalation for complex questions</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-results">
-                        <h4>The Results:</h4>
-                        <div class="results-comparison">
-                            <div class="result-column">
-                                <div class="result-label">BEFORE</div>
-                                <div class="result-item">200 emails/day</div>
-                                <div class="result-item">4-8 hour response</div>
-                                <div class="result-item">20 hrs/week workload</div>
-                                <div class="result-item">$4,500/month cost</div>
-                                <div class="result-item">Lost weekend sales</div>
-                            </div>
-                            <div class="arrow">→</div>
-                            <div class="result-column highlight">
-                                <div class="result-label">AFTER</div>
-                                <div class="result-item">AI handles 150 (75%)</div>
-                                <div class="result-item">Instant (&lt;1 minute, 24/7)</div>
-                                <div class="result-item">7 hrs/week</div>
-                                <div class="result-item">$2,800/month (AI + 1 person)</div>
-                                <div class="result-item">Capturing after-hours inquiries</div>
-                            </div>
-                        </div>
-
-                        <div class="roi-highlight">
-                            <p><strong>ROI:</strong> $1,700/month savings = $20,400/year</p>
-                            <p><strong>Payback period:</strong> 1.5 months</p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <p>"We were skeptical at first, but the AI handles most questions better than we did—and never sleeps. Our customer satisfaction scores actually went UP."</p>
-                        <p class="testimonial-author">— Sarah M., Store Owner</p>
-                    </div>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?scenario=ecommerce" class="btn btn-primary">I Have a Similar Problem</a>
-                </div>
-
-                <!-- Scenario 2: Professional Services -->
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <h3>Professional Services Firm Drowning in Admin</h3>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Business:</h4>
-                        <p>Accounting firm | 8 employees | Serving 200+ small business clients</p>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Problem:</h4>
-                        <ul>
-                            <li>Staff spending 15 hours/week on data entry</li>
-                            <li>Clients emailing documents that need manual processing</li>
-                            <li>Scheduling appointments back-and-forth takes forever</li>
-                            <li>Following up on overdue invoices manually</li>
-                            <li>Team working late during tax season (burnout)</li>
-                            <li>Billing $150/hour but doing $20/hour work</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>What We Built:</h4>
-                        <ul class="checkmark-list">
-                            <li>Automated document intake and categorization</li>
-                            <li>AI email assistant for routine client communications</li>
-                            <li>Smart invoice follow-up system</li>
-                            <li>Automated appointment scheduling</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-results">
-                        <h4>The Results:</h4>
-                        <div class="results-comparison">
-                            <div class="result-column">
-                                <div class="result-label">BEFORE</div>
-                                <div class="result-item">15 hrs/week admin</div>
-                                <div class="result-item">Manual doc processing</div>
-                                <div class="result-item">5 emails to schedule</div>
-                                <div class="result-item">Forgot to follow up</div>
-                                <div class="result-item">$2,250/week wasted</div>
-                            </div>
-                            <div class="arrow">→</div>
-                            <div class="result-column highlight">
-                                <div class="result-label">AFTER</div>
-                                <div class="result-item">4 hrs/week</div>
-                                <div class="result-item">Auto-categorized & filed</div>
-                                <div class="result-item">1-click booking</div>
-                                <div class="result-item">Auto-reminders sent</div>
-                                <div class="result-item">$1,950/week saved</div>
-                            </div>
-                        </div>
-
-                        <div class="roi-highlight">
-                            <p><strong>ROI:</strong> $7,800/month in reclaimed billable hours</p>
-                            <p><strong>Team morale:</strong> Significantly improved</p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <p>"My team can finally focus on what they're good at—advising clients, not data entry. Best investment we've made."</p>
-                        <p class="testimonial-author">— Michael R., Managing Partner</p>
-                    </div>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?scenario=professional-services" class="btn btn-primary">This Sounds Like My Firm</a>
-                </div>
-
-                <!-- Scenario 3: Growing Company -->
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <h3>Growing Company Can't Scale Without Hiring</h3>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Business:</h4>
-                        <p>B2B SaaS startup | 15 employees | Rapid growth</p>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Problem:</h4>
-                        <ul>
-                            <li>Sales team spending 10 hrs/week on data entry (CRM)</li>
-                            <li>Support team overwhelmed: 100+ tickets/week</li>
-                            <li>Same questions answered repeatedly</li>
-                            <li>Need to hire 2-3 more people but can't afford it yet</li>
-                            <li>Processes breaking as company scales</li>
-                            <li>Revenue growing but margins shrinking</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>What We Built:</h4>
-                        <ul class="checkmark-list">
-                            <li>CRM auto-population from emails and calls</li>
-                            <li>AI-powered support ticket triage and responses</li>
-                            <li>Knowledge base chatbot for customers</li>
-                            <li>Automated onboarding workflows for new clients</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-results">
-                        <h4>The Results:</h4>
-                        <div class="results-comparison">
-                            <div class="result-column">
-                                <div class="result-label">BEFORE</div>
-                                <div class="result-item">Need 2-3 new hires</div>
-                                <div class="result-item">100 tickets/week</div>
-                                <div class="result-item">10 hrs/week CRM work</div>
-                                <div class="result-item">$150K+ hiring cost</div>
-                                <div class="result-item">Manual onboarding</div>
-                            </div>
-                            <div class="arrow">→</div>
-                            <div class="result-column highlight">
-                                <div class="result-label">AFTER</div>
-                                <div class="result-item">Scaled with current team</div>
-                                <div class="result-item">AI resolves 60 automatically</div>
-                                <div class="result-item">5 minutes/week</div>
-                                <div class="result-item">$24K/year for automation</div>
-                                <div class="result-item">Self-service + auto-follow-up</div>
-                            </div>
-                        </div>
-
-                        <div class="roi-highlight">
-                            <p><strong>ROI:</strong> Avoided $150K in hiring + improved customer satisfaction scores by 30%</p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <p>"We were about to hire 3 people. Instead, we automated and grew 40% with the same team size. Game changer."</p>
-                        <p class="testimonial-author">— Jennifer L., COO</p>
-                    </div>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?scenario=scaling" class="btn btn-primary">We're Growing Too Fast</a>
-                </div>
-
-                <!-- Scenario 4: Service Business -->
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <h3>Service Business Losing Leads After Hours</h3>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Business:</h4>
-                        <p>Home services company (HVAC, Plumbing) | 20 employees</p>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>The Problem:</h4>
-                        <ul>
-                            <li>40% of inquiries come after business hours</li>
-                            <li>No one answers = customers call competitors</li>
-                            <li>Missing $10K-$15K/month in potential revenue</li>
-                            <li>Paying answering service $800/month (not effective)</li>
-                            <li>Dispatcher spending hours scheduling appointments</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-section">
-                        <h4>What We Built:</h4>
-                        <ul class="checkmark-list">
-                            <li>24/7 AI phone + web chat for inquiries</li>
-                            <li>Instant quotes for common services</li>
-                            <li>Automated appointment scheduling</li>
-                            <li>Smart routing to available technicians</li>
-                            <li>Follow-up reminders and confirmations</li>
-                        </ul>
-                    </div>
-
-                    <div class="scenario-results">
-                        <h4>The Results:</h4>
-                        <div class="results-comparison">
-                            <div class="result-column">
-                                <div class="result-label">BEFORE</div>
-                                <div class="result-item">Miss 40% of leads</div>
-                                <div class="result-item">$800/month service</div>
-                                <div class="result-item">Lose weekend business</div>
-                                <div class="result-item">+$12K/month lost</div>
-                                <div class="result-item">Manual scheduling</div>
-                            </div>
-                            <div class="arrow">→</div>
-                            <div class="result-column highlight">
-                                <div class="result-label">AFTER</div>
-                                <div class="result-item">Capture 95% of inquiries</div>
-                                <div class="result-item">$1,200/month (better results)</div>
-                                <div class="result-item">Book jobs 24/7</div>
-                                <div class="result-item">+$10K/month captured</div>
-                                <div class="result-item">Automated</div>
-                            </div>
-                        </div>
-
-                        <div class="roi-highlight">
-                            <p><strong>ROI:</strong> $10,000/month in new revenue captured</p>
-                            <p><strong>Payback period:</strong> 2 weeks</p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <p>"We're now getting jobs we would have lost to competitors who answered first. And our dispatcher can focus on complex issues instead of basic scheduling."</p>
-                        <p class="testimonial-author">— David K., Owner</p>
-                    </div>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?scenario=after-hours" class="btn btn-primary">We're Missing After-Hours Leads</a>
-                </div>
-            </div>
-
-            <div class="scenarios-cta">
-                <h3>Which scenario sounds most like your business?</h3>
-                <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-primary btn-large">Schedule Your Free Assessment</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: HOW IT WORKS -->
-    <section id="how-it-works" class="section process-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>From Overwhelmed to Automated in 4 Weeks</h2>
-                <p class="section-intro">Simple, proven process. No tech headaches.</p>
-            </div>
-
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Week 1: Discovery</h3>
-                        <ul>
-                            <li>60-min deep-dive call about your business processes</li>
-                            <li>We identify automation opportunities</li>
-                            <li>You get a custom recommendation</li>
-                            <li>Clear timeline and pricing quote</li>
-                        </ul>
-                        <p class="time-commitment">Your time: <strong>1-2 hours</strong></p>
-                    </div>
-                </div>
-
-                <div class="timeline-arrow">↓</div>
-
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Week 2: Design & Approval</h3>
-                        <ul>
-                            <li>We design your custom solution</li>
-                            <li>You review and approve the plan</li>
-                            <li>We answer all your questions</li>
-                            <li>Finalize integration details</li>
-                        </ul>
-                        <p class="time-commitment">Your time: <strong>1 hour review meeting</strong></p>
-                    </div>
-                </div>
-
-                <div class="timeline-arrow">↓</div>
-
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Week 3-4: Build & Test</h3>
-                        <ul>
-                            <li>We build and integrate the solution</li>
-                            <li>Thorough testing with your feedback</li>
-                            <li>We train your team (1-hour session)</li>
-                            <li>Soft launch for final validation</li>
-                        </ul>
-                        <p class="time-commitment">Your time: <strong>2-3 hours (spread over 2 weeks)</strong></p>
-                    </div>
-                </div>
-
-                <div class="timeline-arrow">↓</div>
-
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Go-Live & Ongoing Support</h3>
-                        <ul>
-                            <li>Solution goes fully live</li>
-                            <li>We monitor closely for first 30 days</li>
-                            <li>Monthly optimization and improvements</li>
-                            <li>Ongoing support when you need it</li>
-                        </ul>
-                        <p class="time-commitment">Your time: <strong>~1 hour/month</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="process-highlights">
-                <div class="highlight-item">✓ Most implementations live in 2-4 weeks</div>
-                <div class="highlight-item">✓ We handle all the technical complexity</div>
-                <div class="highlight-item">✓ Your team needs minimal time investment</div>
-                <div class="highlight-item">✓ 30-day money-back guarantee</div>
-            </div>
-
-            <div class="process-cta">
-                <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-primary">Start Your Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: PROOF / CREDIBILITY -->
-    <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Trusted by Growing Businesses</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"We were drowning in customer emails. Now our AI handles 80% automatically. We've saved $2,000/month and our customers get instant responses."</p>
-                    <div class="testimonial-author-info">
-                        <p class="author-name">Sarah M.</p>
-                        <p class="author-title">E-commerce Store Owner</p>
-                        <p class="author-details">Retail | 12 employees</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Best investment we've made. Our team can finally focus on what they're good at instead of data entry. ROI in less than 2 months."</p>
-                    <div class="testimonial-author-info">
-                        <p class="author-name">Michael R.</p>
-                        <p class="author-title">Accounting Firm Managing Partner</p>
-                        <p class="author-details">Professional Services | 8 staff</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"We avoided having to hire 3 new people. The automation scaled with us and saved over $100K in hiring costs."</p>
-                    <div class="testimonial-author-info">
-                        <p class="author-name">Jennifer L.</p>
-                        <p class="author-title">SaaS Company COO</p>
-                        <p class="author-details">Technology | 15 employees</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Businesses Automated</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">$500K+</div>
-                    <div class="stat-label">Saved in Costs</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">70%</div>
-                    <div class="stat-label">Avg Time Savings</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Client Retention</div>
-                </div>
-            </div>
-
-            <div class="credentials">
-                <p>Founded by engineers with 10+ years at Google, USAA, and FedEx</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 7: PRICING -->
-    <section id="pricing" class="section pricing-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Simple, Transparent Pricing</h2>
-                <p class="section-intro">No hidden fees. Month-to-month. 30-day money-back guarantee.</p>
-            </div>
-
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="tier-name">Starter</h3>
-                    <div class="price">$500 - $1,000<span>/month</span></div>
-                    <p class="tier-description">Perfect for: Small teams getting started</p>
-
-                    <ul class="pricing-features">
-                        <li>✓ AI chatbot (website OR email)</li>
-                        <li>✓ Up to 500 conversations/month</li>
-                        <li>✓ Email support</li>
-                        <li>✓ Monthly performance reports</li>
-                    </ul>
-
-                    <div class="pricing-details">
-                        <p><strong>Setup:</strong> $500-$1,000 one-time</p>
-                        <p><strong>Live in:</strong> 1-2 weeks</p>
-                    </div>
-
-                    <p class="best-for"><strong>Best for:</strong></p>
-                    <ul class="best-for-list">
-                        <li>Solo operators to 10-person teams</li>
-                        <li>Clear, simple use case</li>
-                        <li>Testing AI automation</li>
-                    </ul>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?tier=starter" class="btn btn-outline">Get Started</a>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="popular-badge">⭐ MOST POPULAR</div>
-                    <h3 class="tier-name">Professional</h3>
-                    <div class="price">$1,500 - $2,500<span>/month</span></div>
-                    <p class="tier-description">Perfect for: Growing businesses</p>
-
-                    <ul class="pricing-features">
-                        <li>✓ Multi-channel AI (web, email, SMS)</li>
-                        <li>✓ Up to 2,000 conversations/month</li>
-                        <li>✓ CRM integration</li>
-                        <li>✓ Workflow automation (1-2 processes)</li>
-                        <li>✓ Priority support</li>
-                        <li>✓ Monthly strategy calls</li>
-                    </ul>
-
-                    <div class="pricing-details">
-                        <p><strong>Setup:</strong> $1,500-$2,000 one-time</p>
-                        <p><strong>Live in:</strong> 2-3 weeks</p>
-                    </div>
-
-                    <p class="best-for"><strong>Best for:</strong></p>
-                    <ul class="best-for-list">
-                        <li>10-50 person teams</li>
-                        <li>Multiple automation needs</li>
-                        <li>Serious about scaling</li>
-                    </ul>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?tier=professional" class="btn btn-primary">Get Started</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3 class="tier-name">Enterprise</h3>
-                    <div class="price">$3,000+<span>/month</span></div>
-                    <p class="tier-description">Perfect for: Complex needs</p>
-
-                    <ul class="pricing-features">
-                        <li>✓ Fully custom solution</li>
-                        <li>✓ Unlimited volume</li>
-                        <li>✓ Multi-system integration</li>
-                        <li>✓ Multiple workflows</li>
-                        <li>✓ Dedicated account manager</li>
-                        <li>✓ 24/7 support</li>
-                    </ul>
-
-                    <div class="pricing-details">
-                        <p><strong>Setup:</strong> Custom quote</p>
-                        <p><strong>Live in:</strong> 4-8 weeks</p>
-                    </div>
-
-                    <p class="best-for"><strong>Best for:</strong></p>
-                    <ul class="best-for-list">
-                        <li>50+ person teams</li>
-                        <li>Complex operations</li>
-                        <li>Mission-critical automation</li>
-                    </ul>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call?tier=enterprise" class="btn btn-outline">Contact Sales</a>
-                </div>
-            </div>
-
-            <div class="pricing-guarantees">
-                <h3>All plans include:</h3>
-                <div class="guarantees-grid">
-                    <div class="guarantee-item">✓ 30-day money-back guarantee</div>
-                    <div class="guarantee-item">✓ Month-to-month (cancel anytime)</div>
-                    <div class="guarantee-item">✓ Free updates and improvements</div>
-                    <div class="guarantee-item">✓ Ongoing technical support</div>
-                </div>
-            </div>
-
-            <div class="pricing-help">
-                <p class="help-text">Not sure which is right for you?</p>
-                <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-secondary">Schedule a Free Assessment</a>
-                <p class="help-subtext">We'll recommend the best fit</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 8: ROI CALCULATOR -->
-    <section id="roi-calculator" class="section calculator-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>See Your Potential Savings</h2>
-            </div>
-
-            <div class="calculator-container">
-                <div class="calculator-inputs">
-                    <h3>How many hours per week does your team spend on:</h3>
-
-                    <div class="input-group">
-                        <label for="hours-inquiries">Customer inquiries:</label>
-                        <input type="number" id="hours-inquiries" value="10" min="0" max="100">
-                        <span>hours</span>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="hours-data">Data entry:</label>
-                        <input type="number" id="hours-data" value="5" min="0" max="100">
-                        <span>hours</span>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="hours-email">Email management:</label>
-                        <input type="number" id="hours-email" value="8" min="0" max="100">
-                        <span>hours</span>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="hours-admin">Scheduling/admin:</label>
-                        <input type="number" id="hours-admin" value="5" min="0" max="100">
-                        <span>hours</span>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="hourly-cost">Average hourly cost:</label>
-                        <span class="dollar-sign">$</span>
-                        <input type="number" id="hourly-cost" value="30" min="0" max="500">
-                    </div>
-
-                    <button id="calculate-btn" class="btn btn-primary">Calculate Savings</button>
-                </div>
-
-                <div class="calculator-results" id="calculator-results">
-                    <h3>YOUR POTENTIAL SAVINGS:</h3>
-
-                    <div class="result-item">
-                        <span class="result-label">Weekly hours wasted:</span>
-                        <span class="result-value" id="total-hours">28 hours</span>
-                    </div>
-
-                    <div class="result-item">
-                        <span class="result-label">AI can automate:</span>
-                        <span class="result-value" id="automated-hours">~20 hours (70%)</span>
-                    </div>
-
-                    <div class="result-divider"></div>
-
-                    <div class="result-item highlight">
-                        <span class="result-label">Monthly savings:</span>
-                        <span class="result-value" id="monthly-savings">$2,400</span>
-                    </div>
-
-                    <div class="result-item highlight">
-                        <span class="result-label">Annual savings:</span>
-                        <span class="result-value" id="annual-savings">$28,800</span>
-                    </div>
-
-                    <div class="result-divider"></div>
-
-                    <div class="result-item">
-                        <span class="result-label">Cost of automation:</span>
-                        <span class="result-value">$1,500-$2,500/month</span>
-                    </div>
-
-                    <div class="result-item">
-                        <span class="result-label">Net monthly savings:</span>
-                        <span class="result-value" id="net-savings">$0-$900</span>
-                    </div>
-
-                    <div class="result-item">
-                        <span class="result-label">Payback period:</span>
-                        <span class="result-value">2-3 months</span>
-                    </div>
-
-                    <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-primary">Get My Custom Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 9: FAQ -->
-    <section id="faq" class="section faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Common Questions</h2>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How long does it really take to see results?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Most clients see immediate time savings within the first week of going live. Measurable ROI typically shows up within 2-3 months as the automation runs consistently.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What if the AI makes mistakes?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our AI is trained specifically on YOUR business and thoroughly tested before launch. We build in smart escalation—if the AI isn't confident, it routes to your team. Plus, we monitor closely in the first 30 days and continuously improve.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Will this work with our existing systems?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Probably! We integrate with most major platforms (Shopify, WordPress, Salesforce, HubSpot, QuickBooks, etc.). We'll evaluate your tech stack during the discovery call.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do we need to be tech-savvy?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Not at all. We handle all the technical work. Your team just needs to use the solution (which we make simple) and give us feedback for improvements.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What if it doesn't work for us?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer a 30-day money-back guarantee. If you're not seeing value, you get a full refund—no questions asked. Plus, we can always adjust and iterate.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How much time will our team need to invest?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Initial setup: 3-5 hours total spread over 4 weeks (discovery call, review meeting, training). Ongoing: ~1 hour per month for optimization check-ins.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can we cancel anytime?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. Month-to-month contracts with 30 days notice. No long-term lock-in.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How is this different from tools like ChatGPT or Zapier?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Those are great tools, but YOU have to figure out how to use them, set them up, and maintain them. We do all of that FOR you—design, build, integrate, train, and support. You get a complete solution, not a tool.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What industries do you work with?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We specialize in small to medium businesses (5-50 employees) across: e-commerce, professional services (law, accounting, consulting), home services, healthcare practices, real estate, and B2B companies.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I know if this will work for MY specific business?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>That's exactly what our free assessment is for. We'll spend 30-45 minutes understanding your processes and tell you honestly if automation makes sense—and what the ROI would look like.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 10: WHO WE ARE -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Meet the Team Behind Your Automation</h2>
-            </div>
-
-            <div class="about-story">
-                <p>Polaris AI Studio was founded by engineers who spent over a decade building technology at companies like Google, USAA, and FedEx. We saw firsthand how AI could transform operations—but noticed small businesses were being left behind.</p>
-
-                <p>Enterprise companies have entire teams and million-dollar budgets for AI automation. Small businesses have neither—but need it just as much. That's why we exist: to bring enterprise-quality AI automation to businesses like yours, at prices that make sense.</p>
-
-                <p><strong>We're not a faceless software company. We're a hands-on partner who cares about your success.</strong></p>
-            </div>
-
-            <div class="founders-grid">
-                <div class="founder-card">
-                    <div class="founder-image">
-                        <div class="founder-placeholder">TW</div>
-                    </div>
-                    <h3>Tim (Xin) Wang</h3>
-                    <p class="founder-title">Co-founder & CTO</p>
-                    <ul class="founder-bio">
-                        <li>10+ years: Google, USAA, FedEx</li>
-                        <li>MS Computer Science</li>
-                        <li>AI/ML Engineer & Data Scientist</li>
-                        <li>Passionate about making AI accessible</li>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="solutions.html#customer-support" class="hover:text-white transition">Customer Support</a></li>
+                        <li><a href="solutions.html#workflow" class="hover:text-white transition">Workflow Automation</a></li>
+                        <li><a href="solutions.html#custom" class="hover:text-white transition">Custom Solutions</a></li>
                     </ul>
                 </div>
 
-                <div class="founder-card">
-                    <div class="founder-image">
-                        <div class="founder-placeholder">BW</div>
-                    </div>
-                    <h3>Bei Bei Wang</h3>
-                    <p class="founder-title">Co-founder & Strategy</p>
-                    <ul class="founder-bio">
-                        <li>Business Development & Operations</li>
-                        <li>Client Success & Strategy</li>
-                        <li>Bilingual (English/Mandarin)</li>
-                        <li>Focused on ROI and practical results</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 11: FINAL CTA -->
-    <section id="final-cta" class="section final-cta-section">
-        <div class="container">
-            <h2>Ready to Reclaim 20+ Hours Per Week?</h2>
-            <p class="cta-subtitle">Schedule a free 30-minute assessment. We'll show you exactly how automation can work for YOUR business—with no obligation.</p>
-
-            <div class="assessment-benefits">
-                <h3>What happens in the assessment:</h3>
-                <ul class="benefits-list">
-                    <li>✓ We'll discuss your biggest operational challenges</li>
-                    <li>✓ Identify 2-3 automation opportunities</li>
-                    <li>✓ Show you what similar businesses have achieved</li>
-                    <li>✓ Provide ballpark timeline and pricing</li>
-                    <li>✓ Answer all your questions</li>
-                </ul>
-            </div>
-
-            <div class="no-pressure">
-                <p>"This is an honest conversation, not a sales pitch. If automation isn't right for you, we'll tell you."</p>
-            </div>
-
-            <a href="https://calendly.com/polarisaistudio/introduction-call" class="btn btn-primary btn-xl">Schedule Your Free Assessment</a>
-
-            <div class="contact-alternatives">
-                <p>Prefer email? Reach us at: <a href="mailto:nimbusforge.ai@gmail.com">nimbusforge.ai@gmail.com</a></p>
-            </div>
-
-            <div class="final-trust-signals">
-                <div class="trust-item">Average response time: &lt;4 hours</div>
-                <div class="trust-item">No credit card required</div>
-                <div class="trust-item">30-day money-back guarantee on all projects</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 12: FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Polaris AI Studio</h4>
-                    <p>AI Automation for Small Business</p>
-                    <div class="footer-social">
-                        <a href="mailto:nimbusforge.ai@gmail.com" aria-label="Email">📧</a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#scenarios">Case Studies</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="https://calendly.com/polarisaistudio/introduction-call">Contact</a></li>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="https://calendly.com/polarisaistudio/introduction-call">Free Assessment</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="support.html">Support</a></li>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:nimbusforge.ai@gmail.com" class="hover:text-white transition">nimbusforge.ai@gmail.com</a></li>
+                        <li><a href="https://calendly.com/polarisaistudio/introduction-call" class="hover:text-white transition">Schedule a Call</a></li>
+                        <li><a href="support.html" class="hover:text-white transition">Support</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer-bottom">
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
                 <p>&copy; 2025 Polaris AI Studio LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
