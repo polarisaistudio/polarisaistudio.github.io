@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - Polaris AI Studio</title>
+    <meta name="description" content="Real success stories from small businesses using AI automation. See how salons, clinics, real estate offices, and more save time and money.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-gray-900">Polaris AI</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="solutions.html" class="text-gray-600 hover:text-gray-900 transition">Solutions</a>
+                    <a href="case-studies.html" class="text-gray-900 font-semibold">Case Studies</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
+                    <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="solutions.html" class="block text-gray-600 hover:text-gray-900">Solutions</a>
+                <a href="case-studies.html" class="block text-gray-900 font-semibold">Case Studies</a>
+                <a href="pricing.html" class="block text-gray-600 hover:text-gray-900">Pricing</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="https://calendly.com/polarisaistudio/introduction-call"
+                   class="block px-5 py-2 gradient-bg text-white rounded-full text-center">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 via-white to-cyan-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+                Real Businesses, <span class="gradient-text">Real Results</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                See how small businesses like yours are saving 15-30 hours per week and thousands of dollars
+                with custom AI automation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto space-y-16">
+
+            <!-- Case Study 1: E-commerce Store -->
+            <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 md:p-12 border-2 border-pink-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="px-4 py-1 bg-pink-200 text-pink-800 rounded-full text-sm font-semibold">
+                        E-commerce
+                    </div>
+                    <div class="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        12 employees • $2M revenue
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Online Boutique Drowning in Customer Emails</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                    <div class="bg-white rounded-xl p-6 border border-pink-200">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span><strong>200+ customer emails daily</strong> — 60% were repetitive questions</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Customer service team working <strong>10-hour days</strong> to keep up</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Response time: <strong>4-8 hours</strong> (customers getting frustrated)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Missing sales opportunities after 6pm and weekends</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Monthly cost: <strong>$4,500</strong> in customer service labor</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">What We Built</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4 border border-pink-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-pink-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>AI chatbot</strong> on website + email integration
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-pink-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-pink-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Trained</strong> on product catalog, policies, FAQs
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-pink-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-pink-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Connected</strong> to order tracking system
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-pink-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-pink-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Smart escalation</strong> for complex questions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Results</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 rounded-xl p-6 border-2 border-red-200">
+                            <div class="text-sm font-semibold text-red-700 mb-3">BEFORE</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Daily emails:</span>
+                                    <strong>200</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Response time:</span>
+                                    <strong>4-8 hours</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Weekly workload:</span>
+                                    <strong>20 hrs</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Monthly cost:</span>
+                                    <strong>$4,500</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>After-hours:</span>
+                                    <strong>Lost sales</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                            <div class="text-sm font-semibold text-green-700 mb-3">AFTER</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>AI handles:</span>
+                                    <strong>150 (75%)</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Response time:</span>
+                                    <strong>&lt;1 min, 24/7</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Weekly workload:</span>
+                                    <strong>7 hrs</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Monthly cost:</span>
+                                    <strong>$2,800</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>After-hours:</span>
+                                    <strong>Captured!</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gradient-to-r from-pink-600 to-pink-500 rounded-xl p-6 text-white">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-pink-100 text-sm mb-1">Monthly Savings</div>
+                                <div class="text-3xl font-bold">$1,700</div>
+                            </div>
+                            <div>
+                                <div class="text-pink-100 text-sm mb-1">Annual ROI</div>
+                                <div class="text-3xl font-bold">$20,400</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border-l-4 border-pink-500">
+                    <p class="text-gray-700 italic mb-3">
+                        "We were skeptical at first, but the AI handles most questions better than we did—and never sleeps.
+                        Our customer satisfaction scores actually went UP."
+                    </p>
+                    <p class="text-sm text-gray-600">— Sarah M., Store Owner</p>
+                </div>
+            </div>
+
+            <!-- Case Study 2: Medical Clinic -->
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 md:p-12 border-2 border-blue-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="px-4 py-1 bg-blue-200 text-blue-800 rounded-full text-sm font-semibold">
+                        Healthcare
+                    </div>
+                    <div class="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        6 staff • 500+ patients/month
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Dental Clinic's Appointment Scheduling Chaos</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                    <div class="bg-white rounded-xl p-6 border border-blue-200">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Front desk staff spending <strong>12+ hours/week</strong> on phone scheduling</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Patients calling outside office hours got no response</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span><strong>25% no-show rate</strong> due to forgotten appointments</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Manual reminder calls took 6+ hours weekly</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Lost revenue: <strong>$8,000/month</strong> from no-shows</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">What We Built</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4 border border-blue-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>24/7 AI phone system</strong> for appointment booking
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-blue-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Automated reminders</strong> via text & email
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-blue-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Online booking portal</strong> on website
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-blue-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Integration</strong> with practice management software
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Results</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 rounded-xl p-6 border-2 border-red-200">
+                            <div class="text-sm font-semibold text-red-700 mb-3">BEFORE</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Phone time:</span>
+                                    <strong>12 hrs/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>No-show rate:</span>
+                                    <strong>25%</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Reminder calls:</span>
+                                    <strong>6 hrs/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Lost revenue:</span>
+                                    <strong>$8,000/mo</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>After-hours:</span>
+                                    <strong>Missed calls</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                            <div class="text-sm font-semibold text-green-700 mb-3">AFTER</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Phone time:</span>
+                                    <strong>3 hrs/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>No-show rate:</span>
+                                    <strong>8%</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Reminder calls:</span>
+                                    <strong>Automated</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Lost revenue:</span>
+                                    <strong>$2,500/mo</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>After-hours:</span>
+                                    <strong>Bookings 24/7</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl p-6 text-white">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-blue-100 text-sm mb-1">Revenue Recovered</div>
+                                <div class="text-3xl font-bold">$5,500/mo</div>
+                            </div>
+                            <div>
+                                <div class="text-blue-100 text-sm mb-1">Time Saved</div>
+                                <div class="text-3xl font-bold">15 hrs/week</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border-l-4 border-blue-500">
+                    <p class="text-gray-700 italic mb-3">
+                        "Our front desk team can now focus on welcoming patients instead of being glued to the phone.
+                        And our no-show rate dropped by 70%!"
+                    </p>
+                    <p class="text-sm text-gray-600">— Dr. Jennifer K., Practice Owner</p>
+                </div>
+            </div>
+
+            <!-- Case Study 3: Accounting Firm -->
+            <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 md:p-12 border-2 border-purple-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="px-4 py-1 bg-purple-200 text-purple-800 rounded-full text-sm font-semibold">
+                        Professional Services
+                    </div>
+                    <div class="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        8 employees • 200+ clients
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Accounting Firm Drowning in Admin Work</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                    <div class="bg-white rounded-xl p-6 border border-purple-200">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Staff spending <strong>15 hours/week on data entry</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Manually categorizing and filing client documents</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Email inbox chaos—important messages buried</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Billing $150/hour but doing $20/hour work</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Team burnout during tax season</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">What We Built</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4 border border-purple-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Smart document intake</strong> and auto-categorization
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-purple-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>AI email assistant</strong> for client communications
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-purple-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Automated invoice</strong> follow-up system
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-purple-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Data extraction</strong> from PDFs and forms
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Results</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 rounded-xl p-6 border-2 border-red-200">
+                            <div class="text-sm font-semibold text-red-700 mb-3">BEFORE</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Admin time:</span>
+                                    <strong>15 hrs/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Doc processing:</span>
+                                    <strong>Manual</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Email sorting:</span>
+                                    <strong>Manual</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Wasted billing:</span>
+                                    <strong>$2,250/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Team morale:</span>
+                                    <strong>Low</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                            <div class="text-sm font-semibold text-green-700 mb-3">AFTER</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Admin time:</span>
+                                    <strong>4 hrs/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Doc processing:</span>
+                                    <strong>Automated</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Email sorting:</span>
+                                    <strong>Auto-routed</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Reclaimed billing:</span>
+                                    <strong>$1,950/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Team morale:</span>
+                                    <strong>High!</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gradient-to-r from-purple-600 to-purple-500 rounded-xl p-6 text-white">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-purple-100 text-sm mb-1">Billable Hours Reclaimed</div>
+                                <div class="text-3xl font-bold">$7,800/mo</div>
+                            </div>
+                            <div>
+                                <div class="text-purple-100 text-sm mb-1">Time Saved</div>
+                                <div class="text-3xl font-bold">11 hrs/week</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border-l-4 border-purple-500">
+                    <p class="text-gray-700 italic mb-3">
+                        "My team can finally focus on what they're good at—advising clients, not data entry. Best investment we've made."
+                    </p>
+                    <p class="text-sm text-gray-600">— Michael R., Managing Partner</p>
+                </div>
+            </div>
+
+            <!-- Case Study 4: Real Estate -->
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 md:p-12 border-2 border-green-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="px-4 py-1 bg-green-200 text-green-800 rounded-full text-sm font-semibold">
+                        Real Estate
+                    </div>
+                    <div class="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        Solo agent • 100+ properties
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Real Estate Agent Missing Hot Leads</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                    <div class="bg-white rounded-xl p-6 border border-green-200">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span><strong>40% of inquiries</strong> came while showing properties or after hours</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Leads going to competitors who responded first</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Spending 8+ hours/week answering the same questions</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Can't be in two places at once during busy weekends</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-500 font-bold">•</span>
+                                <span>Estimated <strong>$15K/month</strong> in lost deals</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">What We Built</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4 border border-green-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>24/7 AI assistant</strong> for property inquiries
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-green-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Auto-send</strong> property details and photos
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-green-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Smart showing scheduler</strong> based on availability
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-green-200">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Lead qualification</strong> and priority scoring
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Results</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 rounded-xl p-6 border-2 border-red-200">
+                            <div class="text-sm font-semibold text-red-700 mb-3">BEFORE</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Lead capture:</span>
+                                    <strong>60%</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Response time:</span>
+                                    <strong>2-6 hours</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>FAQ time:</span>
+                                    <strong>8 hrs/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Lost deals:</span>
+                                    <strong>~$15K/mo</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Showings:</span>
+                                    <strong>Manual chaos</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                            <div class="text-sm font-semibold text-green-700 mb-3">AFTER</div>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>Lead capture:</span>
+                                    <strong>95%</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Response time:</span>
+                                    <strong>&lt;1 minute</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>FAQ time:</span>
+                                    <strong>1 hr/week</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Recovered deals:</span>
+                                    <strong>+$12K/mo</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Showings:</span>
+                                    <strong>Auto-scheduled</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-6 text-white">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-green-100 text-sm mb-1">Additional Monthly Revenue</div>
+                                <div class="text-3xl font-bold">$12,000</div>
+                            </div>
+                            <div>
+                                <div class="text-green-100 text-sm mb-1">Time Saved</div>
+                                <div class="text-3xl font-bold">7 hrs/week</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border-l-4 border-green-500">
+                    <p class="text-gray-700 italic mb-3">
+                        "I'm closing more deals because I'm not losing leads to faster-responding competitors. The AI handles the initial inquiry
+                        and I jump in when they're ready to see properties."
+                    </p>
+                    <p class="text-sm text-gray-600">— David L., Real Estate Agent</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="gradient-bg rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-4">Ready to See Similar Results?</h2>
+                    <p class="text-xl mb-8 text-indigo-100">
+                        Book a free consultation and we'll show you exactly how AI can transform your business.
+                    </p>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Schedule Free Consultation
+                    </a>
+                    <p class="mt-4 text-sm text-indigo-200">No credit card required • 30-day money-back guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Polaris AI</span>
+                    </div>
+                    <p class="text-sm text-gray-400">AI Automation for Small Business</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="solutions.html#customer-support" class="hover:text-white transition">Customer Support</a></li>
+                        <li><a href="solutions.html#workflow" class="hover:text-white transition">Workflow Automation</a></li>
+                        <li><a href="solutions.html#custom" class="hover:text-white transition">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@polarisaistudio.com" class="hover:text-white transition">info@polarisaistudio.com</a></li>
+                        <li><a href="https://calendly.com/polarisaistudio/introduction-call" class="hover:text-white transition">Schedule a Call</a></li>
+                        <li><a href="support.html" class="hover:text-white transition">Support</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Polaris AI Studio LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
