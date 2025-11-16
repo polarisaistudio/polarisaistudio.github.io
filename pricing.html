@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Polaris AI Studio</title>
+    <meta name="description" content="Simple, transparent pricing for AI automation. Starter, Professional, and Enterprise plans. 30-day money-back guarantee.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-gray-900">Polaris AI</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="solutions.html" class="text-gray-600 hover:text-gray-900 transition">Solutions</a>
+                    <a href="case-studies.html" class="text-gray-600 hover:text-gray-900 transition">Case Studies</a>
+                    <a href="pricing.html" class="text-gray-900 font-semibold">Pricing</a>
+                    <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="solutions.html" class="block text-gray-600 hover:text-gray-900">Solutions</a>
+                <a href="case-studies.html" class="block text-gray-600 hover:text-gray-900">Case Studies</a>
+                <a href="pricing.html" class="block text-gray-900 font-semibold">Pricing</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+                <a href="https://calendly.com/polarisaistudio/introduction-call"
+                   class="block px-5 py-2 gradient-bg text-white rounded-full text-center">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 via-white to-cyan-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+                Simple, <span class="gradient-text">Transparent Pricing</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                No hidden fees. Month-to-month contracts. 30-day money-back guarantee.
+                Choose the plan that fits your business.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-3xl border-2 border-gray-200 p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600">Perfect for small teams getting started</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold text-gray-900">$800</span>
+                            <span class="text-gray-600 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">+ $800 one-time setup</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="text-sm font-semibold text-gray-900 mb-3">INCLUDES:</div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">AI chatbot (website OR email)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Up to 500 conversations/month</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Email support</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Monthly performance reports</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">1 hour training session</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6 p-4 bg-gray-50 rounded-xl">
+                        <div class="text-xs text-gray-600 mb-1">Best for:</div>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Solo operators to 10-person teams</li>
+                            <li>• Clear, simple use case</li>
+                            <li>• Testing AI automation</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://calendly.com/polarisaistudio/introduction-call?tier=starter"
+                       class="block w-full py-3 px-6 bg-gray-900 text-white rounded-lg font-semibold text-center hover:bg-gray-800 transition">
+                        Get Started
+                    </a>
+
+                    <p class="text-xs text-gray-500 text-center mt-4">Live in 1-2 weeks</p>
+                </div>
+
+                <!-- Professional Plan (Featured) -->
+                <div class="bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-3xl p-8 text-white relative transform md:scale-105 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-yellow-400 text-gray-900 rounded-full text-sm font-bold">
+                        MOST POPULAR
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-indigo-100">Perfect for growing businesses</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold">$2,000</span>
+                            <span class="text-indigo-100 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-indigo-200 mt-2">+ $1,500 one-time setup</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="text-sm font-semibold mb-3">EVERYTHING IN STARTER, PLUS:</div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Multi-channel AI (web, email, SMS)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Up to 2,000 conversations/month</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>CRM/calendar integration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Workflow automation (1-2 processes)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Priority support</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Monthly strategy calls</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20">
+                        <div class="text-xs text-indigo-100 mb-1">Best for:</div>
+                        <ul class="text-sm space-y-1">
+                            <li>• 10-50 person teams</li>
+                            <li>• Multiple automation needs</li>
+                            <li>• Serious about scaling</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://calendly.com/polarisaistudio/introduction-call?tier=professional"
+                       class="block w-full py-3 px-6 bg-white text-indigo-600 rounded-lg font-semibold text-center hover:bg-gray-100 transition">
+                        Get Started
+                    </a>
+
+                    <p class="text-xs text-indigo-200 text-center mt-4">Live in 2-3 weeks</p>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-3xl border-2 border-gray-200 p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600">For complex needs & large teams</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold text-gray-900">Custom</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Let's discuss your needs</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="text-sm font-semibold text-gray-900 mb-3">EVERYTHING IN PROFESSIONAL, PLUS:</div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Fully custom solution</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Unlimited conversations</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Multi-system integration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Multiple workflows automated</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">Dedicated account manager</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-700">24/7 support</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6 p-4 bg-gray-50 rounded-xl">
+                        <div class="text-xs text-gray-600 mb-1">Best for:</div>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• 50+ person teams</li>
+                            <li>• Complex operations</li>
+                            <li>• Mission-critical automation</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://calendly.com/polarisaistudio/introduction-call?tier=enterprise"
+                       class="block w-full py-3 px-6 bg-gray-900 text-white rounded-lg font-semibold text-center hover:bg-gray-800 transition">
+                        Contact Sales
+                    </a>
+
+                    <p class="text-xs text-gray-500 text-center mt-4">Live in 4-8 weeks</p>
+                </div>
+
+            </div>
+
+            <!-- All Plans Include -->
+            <div class="bg-gradient-to-br from-indigo-50 to-cyan-50 rounded-2xl p-8 mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">All Plans Include</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-gray-900 mb-1">30-Day Guarantee</div>
+                        <p class="text-sm text-gray-600">Money-back, no questions asked</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-gray-900 mb-1">Month-to-Month</div>
+                        <p class="text-sm text-gray-600">Cancel anytime, no lock-in</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-gray-900 mb-1">Free Updates</div>
+                        <p class="text-sm text-gray-600">Continuous improvements</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-gray-900 mb-1">Ongoing Support</div>
+                        <p class="text-sm text-gray-600">We're here when you need us</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Not Sure -->
+            <div class="text-center bg-white rounded-2xl p-8 border-2 border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Not Sure Which Plan Is Right?</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                    Book a free assessment and we'll recommend the best fit for your business.
+                    No pressure, just honest advice.
+                </p>
+                <a href="https://calendly.com/polarisaistudio/introduction-call"
+                   class="inline-block px-8 py-4 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition">
+                    Schedule Free Assessment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Pricing Questions</h2>
+
+            <div class="space-y-4">
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">What's included in the setup fee?</summary>
+                    <p class="mt-4 text-gray-600">The setup fee covers discovery calls, custom solution design, AI training on your business data, system integration, testing, and team training. You only pay it once.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">Can I switch plans later?</summary>
+                    <p class="mt-4 text-gray-600">Absolutely! You can upgrade or downgrade anytime. If you upgrade, we'll add the new features. If you downgrade, you keep access until the end of your billing period.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">What happens if I go over my conversation limit?</summary>
+                    <p class="mt-4 text-gray-600">We'll notify you when you're approaching your limit. You can either upgrade your plan or pay $0.10 per additional conversation. We never shut off your service without warning.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">Do you offer discounts for annual payment?</summary>
+                    <p class="mt-4 text-gray-600">Yes! Pay annually and save 15% (2 months free). We also offer discounts for nonprofits and startups—just ask during your consultation.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">What if the automation doesn't work for my business?</summary>
+                    <p class="mt-4 text-gray-600">We offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your first month and setup fee—no questions asked. Plus, we work with you to make adjustments before that.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">Is there a long-term contract?</summary>
+                    <p class="mt-4 text-gray-600">No. All plans are month-to-month with 30 days notice to cancel. We earn your business every month.</p>
+                </details>
+
+                <details class="bg-white rounded-xl p-6 border border-gray-200">
+                    <summary class="font-semibold text-gray-900 cursor-pointer">What kind of support do I get?</summary>
+                    <p class="mt-4 text-gray-600">Starter: Email support (24hr response). Professional: Priority email + monthly calls. Enterprise: Dedicated account manager + 24/7 support. All plans include technical support for the AI system.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="gradient-bg rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-4">Ready to Save Time and Money?</h2>
+                    <p class="text-xl mb-8 text-indigo-100">
+                        Start with a free consultation. No commitment required.
+                    </p>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Schedule Free Consultation
+                    </a>
+                    <p class="mt-4 text-sm text-indigo-200">Average response time: &lt;4 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Polaris AI</span>
+                    </div>
+                    <p class="text-sm text-gray-400">AI Automation for Small Business</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="solutions.html#customer-support" class="hover:text-white transition">Customer Support</a></li>
+                        <li><a href="solutions.html#workflow" class="hover:text-white transition">Workflow Automation</a></li>
+                        <li><a href="solutions.html#custom" class="hover:text-white transition">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@polarisaistudio.com" class="hover:text-white transition">info@polarisaistudio.com</a></li>
+                        <li><a href="https://calendly.com/polarisaistudio/introduction-call" class="hover:text-white transition">Schedule a Call</a></li>
+                        <li><a href="support.html" class="hover:text-white transition">Support</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Polaris AI Studio LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
