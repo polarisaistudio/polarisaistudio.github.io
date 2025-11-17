@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- English Pages -->
+    <url>
+        <loc>https://polarisaistudio.com/</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/solutions.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/solutions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/solutions.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/case-studies.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/case-studies.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/case-studies.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/pricing.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/pricing.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/about.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/about.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/about.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/contact.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/contact.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Chinese Pages -->
+    <url>
+        <loc>https://polarisaistudio.com/zh/</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/zh/solutions.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/solutions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/solutions.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/zh/case-studies.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/case-studies.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/case-studies.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/zh/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/pricing.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/pricing.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/zh/about.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/about.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/about.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://polarisaistudio.com/zh/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/contact.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://polarisaistudio.com/contact.html" />
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
