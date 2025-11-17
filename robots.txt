@@ -1,0 +1,12 @@
+# Polaris AI Studio - Robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git/
+
+# Sitemaps
+Sitemap: https://polarisaistudio.com/sitemap.xml
+
+# Crawl-delay (optional - adjust as needed)
+# Crawl-delay: 1
