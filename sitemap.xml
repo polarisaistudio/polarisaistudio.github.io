@@ -1,0 +1,155 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Homepage -->
+    <url>
+        <loc>{{ site.url }}/</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Solutions -->
+    <url>
+        <loc>{{ site.url }}/solutions.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/solutions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/solutions.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Case Studies -->
+    <url>
+        <loc>{{ site.url }}/case-studies.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/case-studies.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/case-studies.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Pricing -->
+    <url>
+        <loc>{{ site.url }}/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/pricing.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/pricing.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- About -->
+    <url>
+        <loc>{{ site.url }}/about.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/about.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/about.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact -->
+    <url>
+        <loc>{{ site.url }}/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/contact.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/contact.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Index -->
+    <url>
+        <loc>{{ site.url }}/blog/</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Blog Posts (Dynamic) -->
+    {% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
+
+    <!-- Service Pages -->
+    <url>
+        <loc>{{ site.url }}/services/ai-chatbot.html</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/services/lead-capture-email-sms.html</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Chinese Pages -->
+    <url>
+        <loc>{{ site.url }}/zh/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/zh/solutions.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/solutions.html" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/solutions.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/zh/case-studies.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/case-studies.html" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/case-studies.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/zh/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/pricing.html" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/pricing.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/zh/about.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/about.html" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/about.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/zh/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/contact.html" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/contact.html" />
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

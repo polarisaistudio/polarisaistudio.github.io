@@ -1,0 +1,60 @@
+# Jekyll Configuration for Polaris AI Studio Blog
+
+# Site settings
+title: Polaris AI Studio
+description: AI Automation for Small Business
+baseurl: ""
+url: "https://polarisaistudio.com"
+email: info@polarisaistudio.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+
+# Kramdown settings for code blocks
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Exclude files from Jekyll processing
+exclude:
+  - README.md
+  - .git
+  - .gitignore
+  - CNAME
+
+# Keep existing HTML files as-is (don't process them)
+keep_files:
+  - index.html
+  - about.html
+  - contact.html
+  - pricing.html
+  - solutions.html
+  - case-studies.html
+  - services
+  - zh
+  - logo.png
+  - ai-chat-widget.js
+  - support.html
+  - privacy.html
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Polaris AI Studio Team"
+
+# Timezone
+timezone: America/New_York
