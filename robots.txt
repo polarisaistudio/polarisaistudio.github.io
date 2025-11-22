@@ -1,8 +1,6 @@
+# Polaris AI Studio - Robots.txt
 User-agent: *
 Allow: /
-
-# Sitemaps
-Sitemap: https://polarisaistudio.com/sitemap.xml
 
 # Disallow admin and internal directories
 Disallow: /admin/
@@ -10,3 +8,9 @@ Disallow: /.git/
 Disallow: /_layouts/
 Disallow: /_posts/
 Disallow: /_config.yml
+
+# Sitemaps
+Sitemap: https://polarisaistudio.com/sitemap.xml
+
+# Crawl-delay (optional - adjust as needed)
+# Crawl-delay: 1
