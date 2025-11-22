@@ -25,6 +25,7 @@ exclude:
   - .git
   - .gitignore
   - CNAME
+  - polarisaistudio_training_data.md
 
 # Keep existing HTML files as-is (don't process them)
 keep_files:
