@@ -2,9 +2,10 @@
 layout: none
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Homepage -->
+    <!-- English Pages -->
     <url>
         <loc>{{ site.url }}/</loc>
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/" />
@@ -14,17 +15,15 @@ layout: none
         <priority>1.0</priority>
     </url>
 
-    <!-- Solutions -->
     <url>
         <loc>{{ site.url }}/solutions.html</loc>
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/solutions.html" />
         <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/solutions.html" />
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Case Studies -->
     <url>
         <loc>{{ site.url }}/case-studies.html</loc>
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/case-studies.html" />
@@ -34,7 +33,6 @@ layout: none
         <priority>0.8</priority>
     </url>
 
-    <!-- Pricing -->
     <url>
         <loc>{{ site.url }}/pricing.html</loc>
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/pricing.html" />
@@ -44,7 +42,6 @@ layout: none
         <priority>0.9</priority>
     </url>
 
-    <!-- About -->
     <url>
         <loc>{{ site.url }}/about.html</loc>
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/about.html" />
@@ -54,13 +51,12 @@ layout: none
         <priority>0.7</priority>
     </url>
 
-    <!-- Contact -->
     <url>
         <loc>{{ site.url }}/contact.html</loc>
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/contact.html" />
         <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/contact.html" />
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
 
@@ -112,7 +108,7 @@ layout: none
         <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/solutions.html" />
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/solutions.html" />
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
@@ -148,7 +144,7 @@ layout: none
         <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/contact.html" />
         <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/zh/contact.html" />
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
 
