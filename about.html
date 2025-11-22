@@ -1,37 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Polaris AI Studio</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">
-                    Polaris AI Studio
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-gray-900">Polaris AI</span>
+                    </a>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="solutions.html" class="text-gray-600 hover:text-gray-900 transition">Solutions</a>
                     <a href="case-studies.html" class="text-gray-600 hover:text-gray-900 transition">Case Studies</a>
                     <a href="pricing.html" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
-                    <a href="about.html" class="text-indigo-600 font-medium">About</a>
+                    <a href="about.html" class="text-gray-900 font-semibold">About</a>
                     <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
                     <a href="zh/about.html" class="text-gray-600 hover:text-gray-900 transition text-sm px-3 py-1 border border-gray-300 rounded-full">中文</a>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition">
+                        Get Started
+                    </a>
                 </div>
-                <a href="https://calendly.com/polarisaistudio" target="_blank" class="bg-gradient-to-r from-indigo-600 to-cyan-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition">
-                    Book a Call
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="solutions.html" class="block text-gray-600 hover:text-gray-900">Solutions</a>
+                <a href="case-studies.html" class="block text-gray-600 hover:text-gray-900">Case Studies</a>
+                <a href="pricing.html" class="block text-gray-600 hover:text-gray-900">Pricing</a>
+                <a href="about.html" class="block text-gray-900 font-semibold">About</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+                <a href="zh/about.html" class="block text-gray-600 hover:text-gray-900">中文 Chinese</a>
+                <a href="https://calendly.com/polarisaistudio/introduction-call"
+                   class="block px-5 py-2 gradient-bg text-white rounded-full text-center">
+                    Get Started
                 </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-indigo-50 via-white to-cyan-50 py-20">
+    <section class="bg-gradient-to-br from-indigo-50 via-white to-cyan-50 pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto">
                 <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -362,6 +426,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 
     <!-- AI Chat Widget -->
     <script src="/ai-chat-widget.js"></script>
