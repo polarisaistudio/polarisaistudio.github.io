@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>{{ page.title }} - Polaris AI Studio 博客</title>
+    <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="author" content="{{ page.author | default: 'Polaris AI Studio团队' }}">
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image | default: '/logo.png' }}">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{ page.author | default: 'Polaris AI Studio团队' }}">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/logo.png' }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Syntax Highlighting CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        }
+
+        /* Blog Content Styling */
+        .blog-content {
+            line-height: 1.8;
+        }
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #374151;
+        }
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            color: #4b5563;
+        }
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            color: #4b5563;
+        }
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+        .blog-content a {
+            color: #6366f1;
+            text-decoration: underline;
+        }
+        .blog-content a:hover {
+            color: #4f46e5;
+        }
+        .blog-content code {
+            background: #f3f4f6;
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+            font-size: 0.875em;
+            color: #ec4899;
+        }
+        .blog-content pre {
+            background: #1f2937;
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin-bottom: 1.25rem;
+        }
+        .blog-content pre code {
+            background: transparent;
+            color: #e5e7eb;
+            padding: 0;
+        }
+        .blog-content blockquote {
+            border-left: 4px solid #6366f1;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #6b7280;
+        }
+        .blog-content img {
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="/zh/index.html" class="flex items-center space-x-2">
+                        <img src="/logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-gray-900">Polaris AI</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/zh/solutions.html" class="text-gray-600 hover:text-gray-900 transition">解决方案</a>
+                    <a href="/zh/case-studies.html" class="text-gray-600 hover:text-gray-900 transition">案例研究</a>
+                    <a href="/zh/pricing.html" class="text-gray-600 hover:text-gray-900 transition">价格</a>
+                    <a href="/zh/blog/" class="text-gray-900 font-semibold">博客</a>
+                    <a href="/zh/about.html" class="text-gray-600 hover:text-gray-900 transition">关于</a>
+                    <a href="/zh/contact.html" class="text-gray-600 hover:text-gray-900 transition">联系</a>
+                    <a href="/index.html" class="text-gray-600 hover:text-gray-900 transition text-sm px-3 py-1 border border-gray-300 rounded-full">English</a>
+                    <a href="https://calendly.com/polarisaistudio/introduction-call"
+                       class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition">
+                        开始使用
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="/zh/solutions.html" class="block text-gray-600 hover:text-gray-900">解决方案</a>
+                <a href="/zh/case-studies.html" class="block text-gray-600 hover:text-gray-900">案例研究</a>
+                <a href="/zh/pricing.html" class="block text-gray-600 hover:text-gray-900">价格</a>
+                <a href="/zh/blog/" class="block text-gray-900 font-semibold">博客</a>
+                <a href="/zh/about.html" class="block text-gray-600 hover:text-gray-900">关于</a>
+                <a href="/zh/contact.html" class="block text-gray-600 hover:text-gray-900">联系</a>
+                <a href="/index.html" class="block text-gray-600 hover:text-gray-900">English 英文</a>
+                <a href="https://calendly.com/polarisaistudio/introduction-call"
+                   class="block px-5 py-2 gradient-bg text-white rounded-full text-center">
+                    开始使用
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Breadcrumb -->
+            <nav class="mb-8">
+                <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                    <li><a href="/zh/index.html" class="hover:text-gray-900">首页</a></li>
+                    <li><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></li>
+                    <li><a href="/zh/blog/" class="hover:text-gray-900">博客</a></li>
+                    <li><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></li>
+                    <li class="text-gray-900 font-medium">{{ page.title }}</li>
+                </ol>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
+
+                {% if page.description %}
+                <p class="text-xl text-gray-600 mb-6">{{ page.description }}</p>
+                {% endif %}
+
+                <div class="flex items-center gap-4 text-sm text-gray-600">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                        <span>{{ page.author | default: 'Polaris AI Studio团队' }}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+                    </div>
+                    {% if page.reading_time %}
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>{{ page.reading_time }} 分钟阅读</span>
+                    </div>
+                    {% endif %}
+                </div>
+
+                {% if page.tags %}
+                <div class="flex flex-wrap gap-2 mt-4">
+                    {% for tag in page.tags %}
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </header>
+
+            <!-- Article Body -->
+            <div class="blog-content bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
+                {{ content }}
+            </div>
+
+            <!-- Share Section -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">分享这篇文章</h3>
+                <div class="flex gap-3">
+                    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | url_encode }}"
+                       target="_blank"
+                       class="px-4 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition text-sm font-medium">
+                        Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | url_encode }}&title={{ page.title | url_encode }}"
+                       target="_blank"
+                       class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium">
+                        LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | url_encode }}"
+                       target="_blank"
+                       class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition text-sm font-medium">
+                        Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- Back to Blog -->
+            <div class="mt-12 text-center">
+                <a href="/zh/blog/" class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-700 transition">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    返回博客
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="/logo.png" alt="Polaris AI Studio" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Polaris AI</span>
+                    </div>
+                    <p class="text-sm text-gray-400">小企业AI自动化</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">解决方案</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/zh/solutions.html#customer-support" class="hover:text-white transition">客户支持</a></li>
+                        <li><a href="/zh/solutions.html#workflow" class="hover:text-white transition">工作流自动化</a></li>
+                        <li><a href="/zh/solutions.html#custom" class="hover:text-white transition">定制解决方案</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">公司</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/zh/about.html" class="hover:text-white transition">关于我们</a></li>
+                        <li><a href="/zh/case-studies.html" class="hover:text-white transition">案例研究</a></li>
+                        <li><a href="/zh/blog/" class="hover:text-white transition">博客</a></li>
+                        <li><a href="/zh/pricing.html" class="hover:text-white transition">价格</a></li>
+                        <li><a href="/zh/contact.html" class="hover:text-white transition">联系</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">联系方式</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:info@polarisaistudio.com" class="hover:text-white transition">info@polarisaistudio.com</a></li>
+                        <li><a href="https://calendly.com/polarisaistudio/introduction-call" class="hover:text-white transition">预约通话</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Polaris AI Studio LLC. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- AI Chat Widget -->
+    <script src="/ai-chat-widget.js"></script>
+</body>
+</html>
