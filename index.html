@@ -1,536 +1,984 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polaris AI Studio - AI Automation for Small Business | Save 20+ Hours/Week</title>
-    <meta name="description" content="Custom AI automation that saves your team 20+ hours per week. 24/7 customer support, workflow automation, and custom solutions for small businesses. 2-4 week implementation.">
-    <meta name="keywords" content="AI automation, small business automation, workflow automation, AI customer support, business process automation, AI chatbot, save time, increase efficiency">
-    <meta name="author" content="Polaris AI Studio">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://polarisaistudio.com/">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Polaris AI Studio - AI Automation for Small Business | Save 20+
+            Hours/Week
+        </title>
+        <meta
+            name="description"
+            content="Custom AI automation that saves your team 20+ hours per week. 24/7 customer support, workflow automation, and custom solutions for small businesses. 2-4 week implementation."
+        />
+        <meta
+            name="keywords"
+            content="AI automation, small business automation, workflow automation, AI customer support, business process automation, AI chatbot, save time, increase efficiency"
+        />
+        <meta name="author" content="Polaris AI Studio" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://polarisaistudio.com/" />
 
-    <!-- Hreflang for bilingual support -->
-    <link rel="alternate" hreflang="en" href="https://polarisaistudio.com/" />
-    <link rel="alternate" hreflang="zh-CN" href="https://polarisaistudio.com/zh/" />
-    <link rel="alternate" hreflang="x-default" href="https://polarisaistudio.com/" />
+        <!-- Hreflang for bilingual support -->
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://polarisaistudio.com/"
+        />
+        <link
+            rel="alternate"
+            hreflang="zh-CN"
+            href="https://polarisaistudio.com/zh/"
+        />
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href="https://polarisaistudio.com/"
+        />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://polarisaistudio.com/">
-    <meta property="og:title" content="Polaris AI Studio - AI Automation for Small Business">
-    <meta property="og:description" content="Custom AI automation that saves your team 20+ hours per week. Stop wasting time on repetitive tasks with our 24/7 AI solutions.">
-    <meta property="og:image" content="https://polarisaistudio.com/logo.png">
-    <meta property="og:site_name" content="Polaris AI Studio">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="zh_CN">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://polarisaistudio.com/" />
+        <meta
+            property="og:title"
+            content="Polaris AI Studio - AI Automation for Small Business"
+        />
+        <meta
+            property="og:description"
+            content="Custom AI automation that saves your team 20+ hours per week. Stop wasting time on repetitive tasks with our 24/7 AI solutions."
+        />
+        <meta
+            property="og:image"
+            content="https://polarisaistudio.com/logo.png"
+        />
+        <meta property="og:site_name" content="Polaris AI Studio" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="zh_CN" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://polarisaistudio.com/">
-    <meta name="twitter:title" content="Polaris AI Studio - AI Automation for Small Business">
-    <meta name="twitter:description" content="Custom AI automation that saves your team 20+ hours per week. Stop wasting time on repetitive tasks.">
-    <meta name="twitter:image" content="https://polarisaistudio.com/logo.png">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://polarisaistudio.com/" />
+        <meta
+            name="twitter:title"
+            content="Polaris AI Studio - AI Automation for Small Business"
+        />
+        <meta
+            name="twitter:description"
+            content="Custom AI automation that saves your team 20+ hours per week. Stop wasting time on repetitive tasks."
+        />
+        <meta
+            name="twitter:image"
+            content="https://polarisaistudio.com/logo.png"
+        />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1',
-                        secondary: '#06b6d4',
+        <!-- Custom Tailwind Config -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#6366f1",
+                            secondary: "#06b6d4",
+                        },
+                        fontFamily: {
+                            sans: ["Inter", "system-ui", "sans-serif"],
+                        },
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
+                },
+            };
+        </script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .gradient-bg {
+                background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            }
+            .glass {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-20px);
                 }
             }
-        }
-    </script>
+            .float-animation {
+                animation: float 6s ease-in-out infinite;
+            }
+        </style>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Polaris AI Studio",
+                "url": "https://polarisaistudio.com",
+                "logo": "https://polarisaistudio.com/logo.png",
+                "description": "AI automation solutions for small businesses. Save 20+ hours per week with custom AI chatbots, workflow automation, and intelligent business processes.",
+                "email": "info@polarisaistudio.com",
+                "foundingDate": "2024",
+                "sameAs": [],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "US"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "info@polarisaistudio.com",
+                    "contactType": "Customer Service",
+                    "availableLanguage": ["English", "Chinese"]
+                },
+                "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "USD",
+                    "lowPrice": "800",
+                    "highPrice": "2000",
+                    "offerCount": "3"
+                },
+                "serviceType": [
+                    "AI Automation",
+                    "Workflow Automation",
+                    "Custom AI Solutions",
+                    "24/7 Customer Support"
+                ],
+                "areaServed": {
+                    "@type": "Place",
+                    "name": "Worldwide"
+                }
+            }
+        </script>
 
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-    </style>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Polaris AI Studio",
+                "url": "https://polarisaistudio.com",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://polarisaistudio.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                },
+                "inLanguage": ["en", "zh-CN"]
+            }
+        </script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100"
+        >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-2">
+                        <img
+                            src="logo.png"
+                            alt="Polaris AI Studio"
+                            class="h-8 w-8"
+                        />
+                        <span class="text-xl font-bold text-gray-900"
+                            >Polaris AI</span
+                        >
+                    </div>
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Polaris AI Studio",
-        "url": "https://polarisaistudio.com",
-        "logo": "https://polarisaistudio.com/logo.png",
-        "description": "AI automation solutions for small businesses. Save 20+ hours per week with custom AI chatbots, workflow automation, and intelligent business processes.",
-        "email": "info@polarisaistudio.com",
-        "foundingDate": "2024",
-        "sameAs": [],
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "info@polarisaistudio.com",
-            "contactType": "Customer Service",
-            "availableLanguage": ["English", "Chinese"]
-        },
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "USD",
-            "lowPrice": "800",
-            "highPrice": "2000",
-            "offerCount": "3"
-        },
-        "serviceType": ["AI Automation", "Workflow Automation", "Custom AI Solutions", "24/7 Customer Support"],
-        "areaServed": {
-            "@type": "Place",
-            "name": "Worldwide"
-        }
-    }
-    </script>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a
+                            href="#solutions"
+                            class="text-gray-600 hover:text-gray-900 transition"
+                            >Solutions</a
+                        >
+                        <a
+                            href="case-studies.html"
+                            class="text-gray-600 hover:text-gray-900 transition"
+                            >Case Studies</a
+                        >
+                        <a
+                            href="pricing.html"
+                            class="text-gray-600 hover:text-gray-900 transition"
+                            >Pricing</a
+                        >
+                        <a
+                            href="about.html"
+                            class="text-gray-600 hover:text-gray-900 transition"
+                            >About</a
+                        >
+                        <a
+                            href="contact.html"
+                            class="text-gray-600 hover:text-gray-900 transition"
+                            >Contact</a
+                        >
+                        <a
+                            href="zh/index.html"
+                            class="text-gray-600 hover:text-gray-900 transition text-sm px-3 py-1 border border-gray-300 rounded-full"
+                            >中文</a
+                        >
+                        <a
+                            href="https://calendly.com/polarisaistudio/introduction-call"
+                            class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition"
+                        >
+                            Get Started
+                        </a>
+                    </div>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Polaris AI Studio",
-        "url": "https://polarisaistudio.com",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://polarisaistudio.com/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
-        "inLanguage": ["en", "zh-CN"]
-    }
-    </script>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                    <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
-                    <span class="text-xl font-bold text-gray-900">Polaris AI</span>
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden p-2" id="mobile-menu-btn">
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        </svg>
+                    </button>
                 </div>
+            </div>
 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#solutions" class="text-gray-600 hover:text-gray-900 transition">Solutions</a>
-                    <a href="case-studies.html" class="text-gray-600 hover:text-gray-900 transition">Case Studies</a>
-                    <a href="pricing.html" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
-                    <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
-                    <a href="zh/index.html" class="text-gray-600 hover:text-gray-900 transition text-sm px-3 py-1 border border-gray-300 rounded-full">中文</a>
-                    <a href="https://calendly.com/polarisaistudio/introduction-call"
-                       class="px-5 py-2 gradient-bg text-white rounded-full hover:opacity-90 transition">
+            <!-- Mobile menu -->
+            <div
+                class="hidden md:hidden bg-white border-t border-gray-100"
+                id="mobile-menu"
+            >
+                <div class="px-4 py-3 space-y-3">
+                    <a
+                        href="#solutions"
+                        class="block text-gray-600 hover:text-gray-900"
+                        >Solutions</a
+                    >
+                    <a
+                        href="case-studies.html"
+                        class="block text-gray-600 hover:text-gray-900"
+                        >Case Studies</a
+                    >
+                    <a
+                        href="pricing.html"
+                        class="block text-gray-600 hover:text-gray-900"
+                        >Pricing</a
+                    >
+                    <a
+                        href="about.html"
+                        class="block text-gray-600 hover:text-gray-900"
+                        >About</a
+                    >
+                    <a
+                        href="contact.html"
+                        class="block text-gray-600 hover:text-gray-900"
+                        >Contact</a
+                    >
+                    <a
+                        href="zh/index.html"
+                        class="block text-gray-600 hover:text-gray-900"
+                        >中文 Chinese</a
+                    >
+                    <a
+                        href="https://calendly.com/polarisaistudio/introduction-call"
+                        class="block px-5 py-2 gradient-bg text-white rounded-full text-center"
+                    >
                         Get Started
                     </a>
                 </div>
-
-                <!-- Mobile menu button -->
-                <button class="md:hidden p-2" id="mobile-menu-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
             </div>
-        </div>
+        </nav>
 
-        <!-- Mobile menu -->
-        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
-            <div class="px-4 py-3 space-y-3">
-                <a href="#solutions" class="block text-gray-600 hover:text-gray-900">Solutions</a>
-                <a href="case-studies.html" class="block text-gray-600 hover:text-gray-900">Case Studies</a>
-                <a href="pricing.html" class="block text-gray-600 hover:text-gray-900">Pricing</a>
-                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
-                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
-                <a href="zh/index.html" class="block text-gray-600 hover:text-gray-900">中文 Chinese</a>
-                <a href="https://calendly.com/polarisaistudio/introduction-call"
-                   class="block px-5 py-2 gradient-bg text-white rounded-full text-center">
-                    Get Started
-                </a>
-            </div>
-        </div>
-    </nav>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Content -->
+                    <div class="space-y-8">
+                        <div class="inline-block">
+                            <span
+                                class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium"
+                            >
+                                🚀 Save 20+ Hours Per Week
+                            </span>
+                        </div>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left: Content -->
-                <div class="space-y-8">
-                    <div class="inline-block">
-                        <span class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">
-                            🚀 Save 20+ Hours Per Week
-                        </span>
+                        <h1
+                            class="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight"
+                        >
+                            AI Automation
+                            <span class="gradient-text"
+                                >Built for Your Business</span
+                            >
+                        </h1>
+
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Stop wasting time on repetitive tasks. We build
+                            custom AI solutions that automate your workflows,
+                            answer customer questions 24/7, and help you scale
+                            without hiring.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a
+                                href="https://calendly.com/polarisaistudio/introduction-call"
+                                class="px-8 py-4 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition text-center"
+                            >
+                                Book Free Assessment
+                            </a>
+                            <a
+                                href="#demo"
+                                class="px-8 py-4 bg-white border-2 border-gray-200 text-gray-900 rounded-lg font-semibold hover:border-gray-300 transition text-center"
+                            >
+                                See Demo
+                            </a>
+                        </div>
+
+                        <!-- Trust Signals -->
+                        <div class="flex items-center gap-8 pt-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">
+                                    70%
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    Time Saved
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">
+                                    2-4 Weeks
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    To Go Live
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">
+                                    $100K+
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    Costs Saved
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight">
-                        AI Automation
-                        <span class="gradient-text">Built for Your Business</span>
-                    </h1>
+                    <!-- Right: Visual Demo -->
+                    <div class="relative">
+                        <div
+                            class="relative z-10 bg-white rounded-2xl shadow-2xl p-6 border border-gray-100"
+                        >
+                            <!-- Chat Demo -->
+                            <div class="space-y-4">
+                                <div
+                                    class="flex items-center gap-3 pb-4 border-b border-gray-100"
+                                >
+                                    <div
+                                        class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 text-white"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="font-semibold text-gray-900"
+                                        >
+                                            AI Assistant
+                                        </div>
+                                        <div class="text-xs text-green-600">
+                                            ● Online
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <p class="text-xl text-gray-600 leading-relaxed">
-                        Stop wasting time on repetitive tasks. We build custom AI solutions that automate your workflows,
-                        answer customer questions 24/7, and help you scale without hiring.
+                                <!-- Customer Question -->
+                                <div class="flex gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0"
+                                    >
+                                        <svg
+                                            class="w-4 h-4 text-gray-600"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-xs"
+                                    >
+                                        <p class="text-sm text-gray-700">
+                                            Where's my order? #12345
+                                        </p>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            10:24 AM
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- AI Response -->
+                                <div class="flex gap-3 justify-end">
+                                    <div
+                                        class="gradient-bg rounded-2xl rounded-tr-none px-4 py-3 max-w-xs"
+                                    >
+                                        <p class="text-sm text-white">
+                                            Your order #12345 shipped yesterday
+                                            and will arrive tomorrow by 5pm.
+                                            Track it here: track.com/12345
+                                        </p>
+                                        <p class="text-xs text-indigo-200 mt-1">
+                                            10:24 AM
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0"
+                                    >
+                                        <svg
+                                            class="w-4 h-4 text-white"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="text-center pt-2">
+                                    <span
+                                        class="text-xs text-gray-500 bg-gray-50 px-3 py-1 rounded-full"
+                                    >
+                                        ⚡ Responded in &lt;1 second
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div
+                            class="absolute -top-6 -right-6 w-32 h-32 bg-indigo-100 rounded-full opacity-50 blur-3xl"
+                        ></div>
+                        <div
+                            class="absolute -bottom-6 -left-6 w-32 h-32 bg-cyan-100 rounded-full opacity-50 blur-3xl"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Preview -->
+        <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        How We <span class="gradient-text">Help You</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Custom AI automation for the tasks draining your team's
+                        time
                     </p>
+                </div>
 
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://calendly.com/polarisaistudio/introduction-call"
-                           class="px-8 py-4 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition text-center">
-                            Book Free Assessment
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Solution 1 -->
+                    <div
+                        class="group p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300"
+                    >
+                        <div
+                            class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                        >
+                            <svg
+                                class="w-7 h-7 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                                />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            24/7 Customer Support
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            AI chatbots that handle 80% of customer questions
+                            instantly—day or night.
+                        </p>
+
+                        <a
+                            href="solutions.html#customer-support"
+                            class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all"
+                        >
+                            Learn more
+                            <svg
+                                class="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
                         </a>
-                        <a href="#demo"
-                           class="px-8 py-4 bg-white border-2 border-gray-200 text-gray-900 rounded-lg font-semibold hover:border-gray-300 transition text-center">
-                            See Demo
+                    </div>
+
+                    <!-- Solution 2 -->
+                    <div
+                        class="group p-8 bg-gradient-to-br from-cyan-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300"
+                    >
+                        <div
+                            class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                        >
+                            <svg
+                                class="w-7 h-7 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                                />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Workflow Automation
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Eliminate manual data entry, email sorting, and
+                            document processing.
+                        </p>
+
+                        <a
+                            href="solutions.html#workflow"
+                            class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all"
+                        >
+                            Learn more
+                            <svg
+                                class="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
                         </a>
                     </div>
 
-                    <!-- Trust Signals -->
-                    <div class="flex items-center gap-8 pt-4">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-gray-900">70%</div>
-                            <div class="text-sm text-gray-600">Time Saved</div>
+                    <!-- Solution 3 -->
+                    <div
+                        class="group p-8 bg-gradient-to-br from-purple-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300"
+                    >
+                        <div
+                            class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                        >
+                            <svg
+                                class="w-7 h-7 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                                />
+                            </svg>
                         </div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-gray-900">2-4 Weeks</div>
-                            <div class="text-sm text-gray-600">To Go Live</div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Custom Solutions
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Unique business challenge? We build AI tools
+                            tailored to your exact needs.
+                        </p>
+
+                        <a
+                            href="solutions.html#custom"
+                            class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all"
+                        >
+                            Learn more
+                            <svg
+                                class="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Trusted by Growing Businesses
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+                    >
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-gray-900">$100K+</div>
-                            <div class="text-sm text-gray-600">Costs Saved</div>
+                        <p class="text-gray-700 mb-6 italic">
+                            "Our AI handles 80% of customer emails
+                            automatically. We've saved $2,000/month and
+                            customers get instant responses."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-cyan-400"
+                            ></div>
+                            <div>
+                                <div class="font-semibold text-gray-900">
+                                    Sarah M.
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    E-commerce Store Owner
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+                    >
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="text-gray-700 mb-6 italic">
+                            "We avoided hiring 3 people. The automation scaled
+                            with us and saved over $100K in hiring costs."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400"
+                            ></div>
+                            <div>
+                                <div class="font-semibold text-gray-900">
+                                    Jennifer L.
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    SaaS Company COO
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+                    >
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="text-gray-700 mb-6 italic">
+                            "My team can finally focus on advising clients
+                            instead of data entry. Best investment we've made."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400"
+                            ></div>
+                            <div>
+                                <div class="font-semibold text-gray-900">
+                                    Michael R.
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    Managing Partner
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right: Visual Demo -->
-                <div class="relative">
-                    <div class="relative z-10 bg-white rounded-2xl shadow-2xl p-6 border border-gray-100">
-                        <!-- Chat Demo -->
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3 pb-4 border-b border-gray-100">
-                                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-900">AI Assistant</div>
-                                    <div class="text-xs text-green-600">● Online</div>
-                                </div>
-                            </div>
-
-                            <!-- Customer Question -->
-                            <div class="flex gap-3">
-                                <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                                    </svg>
-                                </div>
-                                <div class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-xs">
-                                    <p class="text-sm text-gray-700">Where's my order? #12345</p>
-                                    <p class="text-xs text-gray-500 mt-1">10:24 AM</p>
-                                </div>
-                            </div>
-
-                            <!-- AI Response -->
-                            <div class="flex gap-3 justify-end">
-                                <div class="gradient-bg rounded-2xl rounded-tr-none px-4 py-3 max-w-xs">
-                                    <p class="text-sm text-white">Your order #12345 shipped yesterday and will arrive tomorrow by 5pm. Track it here: track.com/12345</p>
-                                    <p class="text-xs text-indigo-200 mt-1">10:24 AM</p>
-                                </div>
-                                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="text-center pt-2">
-                                <span class="text-xs text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
-                                    ⚡ Responded in &lt;1 second
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Floating Elements -->
-                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-indigo-100 rounded-full opacity-50 blur-3xl"></div>
-                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-cyan-100 rounded-full opacity-50 blur-3xl"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions Preview -->
-    <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    How We <span class="gradient-text">Help You</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Custom AI automation for the tasks draining your team's time
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Solution 1 -->
-                <div class="group p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Customer Support</h3>
-                    <p class="text-gray-600 mb-4">AI chatbots that handle 80% of customer questions instantly—day or night.</p>
-
-                    <a href="solutions.html#customer-support" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
-                        Learn more
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                <div class="text-center mt-12">
+                    <a
+                        href="case-studies.html"
+                        class="inline-flex items-center text-indigo-600 font-semibold text-lg hover:gap-2 transition-all"
+                    >
+                        Read Full Case Studies
+                        <svg
+                            class="w-5 h-5 ml-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            />
                         </svg>
                     </a>
                 </div>
+            </div>
+        </section>
 
-                <!-- Solution 2 -->
-                <div class="group p-8 bg-gradient-to-br from-cyan-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
+        <!-- CTA Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="gradient-bg rounded-3xl p-12 text-center text-white relative overflow-hidden"
+                >
+                    <div
+                        class="absolute inset-0 bg-white/10 backdrop-blur-sm"
+                    ></div>
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-bold mb-4">
+                            Ready to Automate Your Business?
+                        </h2>
+                        <p class="text-xl mb-8 text-indigo-100">
+                            Book a free 30-minute assessment. We'll show you
+                            exactly what's possible.
+                        </p>
+                        <a
+                            href="https://calendly.com/polarisaistudio/introduction-call"
+                            class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition"
+                        >
+                            Schedule Free Assessment
+                        </a>
+                        <p class="mt-4 text-sm text-indigo-200">
+                            No credit card required • 30-day money-back
+                            guarantee
+                        </p>
                     </div>
-
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Workflow Automation</h3>
-                    <p class="text-gray-600 mb-4">Eliminate manual data entry, email sorting, and document processing.</p>
-
-                    <a href="solutions.html#workflow" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
-                        Learn more
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Solution 3 -->
-                <div class="group p-8 bg-gradient-to-br from-purple-50 to-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Solutions</h3>
-                    <p class="text-gray-600 mb-4">Unique business challenge? We build AI tools tailored to your exact needs.</p>
-
-                    <a href="solutions.html#custom" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
-                        Learn more
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Social Proof -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    Trusted by Growing Businesses
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            ⭐⭐⭐⭐⭐
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <img
+                                src="logo.png"
+                                alt="Polaris AI Studio"
+                                class="h-8 w-8"
+                            />
+                            <span class="text-xl font-bold text-white"
+                                >Polaris AI</span
+                            >
                         </div>
+                        <p class="text-sm text-gray-400">
+                            AI Automation for Small Business
+                        </p>
                     </div>
-                    <p class="text-gray-700 mb-6 italic">
-                        "Our AI handles 80% of customer emails automatically. We've saved $2,000/month and customers get instant responses."
+
+                    <div>
+                        <h4 class="font-semibold text-white mb-4">Solutions</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a
+                                    href="solutions.html#customer-support"
+                                    class="hover:text-white transition"
+                                    >Customer Support</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="solutions.html#workflow"
+                                    class="hover:text-white transition"
+                                    >Workflow Automation</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="solutions.html#custom"
+                                    class="hover:text-white transition"
+                                    >Custom Solutions</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-white mb-4">Company</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a
+                                    href="about.html"
+                                    class="hover:text-white transition"
+                                    >About Us</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="case-studies.html"
+                                    class="hover:text-white transition"
+                                    >Case Studies</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="pricing.html"
+                                    class="hover:text-white transition"
+                                    >Pricing</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="contact.html"
+                                    class="hover:text-white transition"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-white mb-4">Contact</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a
+                                    href="mailto:info@polarisaistudio.com"
+                                    class="hover:text-white transition"
+                                    >info@polarisaistudio.com</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://calendly.com/polarisaistudio/introduction-call"
+                                    class="hover:text-white transition"
+                                    >Schedule a Call</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="support.html"
+                                    class="hover:text-white transition"
+                                    >Support</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="privacy.html"
+                                    class="hover:text-white transition"
+                                    >Privacy Policy</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400"
+                >
+                    <p>
+                        &copy; 2025 Polaris AI Studio LLC. All rights reserved.
                     </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-cyan-400"></div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Sarah M.</div>
-                            <div class="text-sm text-gray-600">E-commerce Store Owner</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-6 italic">
-                        "We avoided hiring 3 people. The automation scaled with us and saved over $100K in hiring costs."
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400"></div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Jennifer L.</div>
-                            <div class="text-sm text-gray-600">SaaS Company COO</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-6 italic">
-                        "My team can finally focus on advising clients instead of data entry. Best investment we've made."
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400"></div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Michael R.</div>
-                            <div class="text-sm text-gray-600">Managing Partner</div>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </footer>
 
-            <div class="text-center mt-12">
-                <a href="case-studies.html" class="inline-flex items-center text-indigo-600 font-semibold text-lg hover:gap-2 transition-all">
-                    Read Full Case Studies
-                    <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
+        <script>
+            // Mobile menu toggle
+            document
+                .getElementById("mobile-menu-btn")
+                .addEventListener("click", () => {
+                    document
+                        .getElementById("mobile-menu")
+                        .classList.toggle("hidden");
+                });
 
-    <!-- CTA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="gradient-bg rounded-3xl p-12 text-center text-white relative overflow-hidden">
-                <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
-                <div class="relative z-10">
-                    <h2 class="text-4xl font-bold mb-4">Ready to Automate Your Business?</h2>
-                    <p class="text-xl mb-8 text-indigo-100">
-                        Book a free 30-minute assessment. We'll show you exactly what's possible.
-                    </p>
-                    <a href="https://calendly.com/polarisaistudio/introduction-call"
-                       class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition">
-                        Schedule Free Assessment
-                    </a>
-                    <p class="mt-4 text-sm text-indigo-200">No credit card required • 30-day money-back guarantee</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <img src="logo.png" alt="Polaris AI Studio" class="h-8 w-8">
-                        <span class="text-xl font-bold text-white">Polaris AI</span>
-                    </div>
-                    <p class="text-sm text-gray-400">AI Automation for Small Business</p>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-white mb-4">Solutions</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="solutions.html#customer-support" class="hover:text-white transition">Customer Support</a></li>
-                        <li><a href="solutions.html#workflow" class="hover:text-white transition">Workflow Automation</a></li>
-                        <li><a href="solutions.html#custom" class="hover:text-white transition">Custom Solutions</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-white mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
-                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-white mb-4">Contact</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="mailto:info@polarisaistudio.com" class="hover:text-white transition">info@polarisaistudio.com</a></li>
-                        <li><a href="https://calendly.com/polarisaistudio/introduction-call" class="hover:text-white transition">Schedule a Call</a></li>
-                        <li><a href="support.html" class="hover:text-white transition">Support</a></li>
-                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2025 Polaris AI Studio LLC. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(
+                        this.getAttribute("href"),
+                    );
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
             });
-        });
-    </script>
+        </script>
 
-    <!-- AI Chat Widget -->
-    <script src="https://chatbot-nine-omega-33.vercel.app/embed.js"</script>
-</body>
+        <!-- AI Chat Widget -->
+        <script src="https://chatbot-nine-omega-33.vercel.app/embed.js"></script>
+    </body>
 </html>
